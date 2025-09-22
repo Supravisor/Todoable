@@ -13,3 +13,5 @@ const anchor = document.getElementById("anchor");
   anchor.innerText = timePeriod.join(" ");
 
 const periods = anchor.innerText.split(" ")
+
+  anchor.innerHTML = periods.map(el => `<li>${el}</li>`).join("");
