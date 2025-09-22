@@ -1,1 +1,8 @@
 
+#anchor {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Corbel;
+}
+
