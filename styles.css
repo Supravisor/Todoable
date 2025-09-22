@@ -6,3 +6,8 @@
   font-family: Corbel;
 }
 
+#anchor li {
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 7px 12px;
+}
