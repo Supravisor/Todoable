@@ -1,0 +1,19 @@
+
+#anchor {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Corbel;
+}
+
+#anchor li {
+  background: rgb(200, 200, 200);
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 7px 12px;
+}
+
+#anchor li:active {
+  background: white;
+  color: black;
+}
