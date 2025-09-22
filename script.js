@@ -16,12 +16,12 @@ const periods = anchor.innerText.split(" ")
 
   anchor.innerHTML = periods.map(el => `<li>${el}</li>`).join("");
 
-const tasks = document.getElementById("tasks");
+const tasksList = document.getElementById("tasks");
 
   anchor.addEventListener("click", event => {
 
     if (event.target.innerText === "Daily") {
-     tasks.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `<li><input type="checkbox" />${el}</li>`).join("");
+     tasksList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `<li><input type="checkbox" />${el}</li>`).join("");
     }
   
   });
