@@ -20,6 +20,8 @@ const tasksList = document.getElementById("tasks");
 
   anchor.addEventListener("click", event => {
 
+    taskList.innerHTML = ``;
+
     if (event.target.innerText === "Daily") {
      tasksList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `<li><input type="checkbox" />${el}</li>`).join("");
     }
