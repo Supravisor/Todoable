@@ -15,3 +15,7 @@ const anchor = document.getElementById("anchor");
 const periods = anchor.innerText.split(" ")
 
   anchor.innerHTML = periods.map(el => `<li>${el}</li>`).join("");
+
+  anchor.addEventListener("click", event => {
+  
+  });
