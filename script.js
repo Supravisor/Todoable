@@ -19,5 +19,9 @@ const periods = anchor.innerText.split(" ")
 const tasks = document.getElementById("tasks");
 
   anchor.addEventListener("click", event => {
+
+    if (event.target.innerText === "Daily") {
+     tasks.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `<li><input type="checkbox" />${el}</li>`).join("");
+    }
   
   });
