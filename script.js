@@ -7,3 +7,4 @@ let tasks = {
   "Monthly": ["Status reports"]
 }
 
+const timePeriod = Object.keys(tasks).join(" ").split(" ");
