@@ -9,3 +9,5 @@ let tasks = {
 
 const timePeriod = Object.keys(tasks).join(" ").split(" ");
 const anchor = document.getElementById("anchor");
+
+  anchor.innerText = timePeriod.join(" ");
