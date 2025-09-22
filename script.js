@@ -16,6 +16,8 @@ const periods = anchor.innerText.split(" ")
 
   anchor.innerHTML = periods.map(el => `<li>${el}</li>`).join("");
 
+const tasks = document.getElementById("tasks");
+
   anchor.addEventListener("click", event => {
   
   });
