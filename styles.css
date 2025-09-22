@@ -12,3 +12,8 @@
   border-radius: 6px;
   padding: 7px 12px;
 }
+
+#anchor li:active {
+  background: white;
+  color: black;
+}
