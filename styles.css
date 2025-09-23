@@ -17,3 +17,8 @@
   background: white;
   color: black;
 }
+
+#task-list {
+  font-family: Arial;
+  list-style: none;
+}
