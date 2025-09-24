@@ -35,6 +35,10 @@ h2 {
   margin-left: 2.5em;
 }
 
+li {
+  list-style: none;
+}
+
 input {
   height: 44px;
   width: 44px;
