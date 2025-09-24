@@ -24,8 +24,8 @@ const taskList = document.getElementById("task-list");
      taskList.innerHTML = ``;
      title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
      taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
-     <li>
        <input type="checkbox" />
+     <li>
        <label>
          ${el}
        </label>
