@@ -18,15 +18,19 @@
   color: black;
 }
 
+h2 {
+  font-family: Tahoma;
+  padding-top: 2em;
+  margin-left: 1.8em;
+}
+
 #task-list {
   font-family: Arial;
   list-style: none;
 }
 
-h2 {
-  font-family: Tahoma;
-  padding-top: 2em;
-  margin-left: 1.8em;
+#task-list li {
+  font-size: 1.5rem;
 }
 
 input {

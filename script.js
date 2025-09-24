@@ -23,7 +23,13 @@ const taskList = document.getElementById("task-list");
     if (event.target.innerText === "Daily") {
      taskList.innerHTML = ``;
      title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
-     taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `<li><input type="checkbox" />${el}</li>`).join("");
+     taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
+     <li>
+       <input type="checkbox" />
+       <label>
+         ${el}
+       </label>
+     </li>`).join("");
     }
   
   });
