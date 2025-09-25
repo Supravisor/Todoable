@@ -24,6 +24,7 @@ const taskList = document.getElementById("task-list");
 
 // weekly
 const weekly = document.getElementById("weekly");
+const monday = document.getElementById("Monday");
 
   anchor.addEventListener("click", event => {
 
@@ -47,6 +48,7 @@ const weekly = document.getElementById("weekly");
 
     if (event.target.innerText === "Weekly") {
       weekly.classList.toggle("hidden");
+      monday.innerHTML = tasks[event.target.innerText]["Monday"].map(el => `<li>${el}</li>`).join("");
     }
 
   });
