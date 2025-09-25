@@ -28,15 +28,21 @@ const weekly = document.getElementById("weekly");
   anchor.addEventListener("click", event => {
 
     if (event.target.innerText === "Daily") {
-     taskList.innerHTML = ``;
-     title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
-     taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
+
+      if (weekly.classList[0] === "weekly") {
+        weekly.classList.add("hidden");
+      }
+
+       taskList.innerHTML = ``;
+       title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
+       taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
        <input type="checkbox" />
      <li>
        <label>
          ${el}
        </label>
      </li>`).join("");
+
     }
   
   });
