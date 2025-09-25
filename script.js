@@ -44,5 +44,9 @@ const weekly = document.getElementById("weekly");
      </li>`).join("");
 
     }
-  
+
+    if (event.target.innerText === "Weekly") {
+      weekly.classList.toggle("hidden");
+    }
+
   });
