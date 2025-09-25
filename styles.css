@@ -24,7 +24,7 @@ h2 {
   margin-left: 1.8em;
 }
 
-#task-list {
+#task-list, li {
   font-family: Arial;
 }
 
