@@ -1,9 +1,13 @@
 
 let tasks = {
   "Daily": {
-    "Recurring": ["check phone messages", "check emails"]
+    "Recurring": ["voicemail", "email"]
   },
-  "Weekly": ["Progress updates"],
+  "Weekly": {
+    "Monday": ["Progress updates"],
+    "Tuesday": ["tacos", "staff meeting"],
+    "Wednesday": ["client lunch"]
+   },
   "Monthly": ["Status reports"]
 }
 
@@ -18,18 +22,35 @@ const periods = anchor.innerText.split(" ")
 
 const taskList = document.getElementById("task-list");
 
+// weekly
+const weekly = document.getElementById("weekly");
+const monday = document.getElementById("Monday");
+const tuesday = document.getElementById("Tuesday");
+
   anchor.addEventListener("click", event => {
 
     if (event.target.innerText === "Daily") {
-     taskList.innerHTML = ``;
-     title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
-     taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
+
+      if (weekly.classList[0] === "weekly") {
+        weekly.classList.add("hidden");
+      }
+
+       taskList.innerHTML = ``;
+       title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
+       taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
        <input type="checkbox" />
      <li>
        <label>
          ${el}
        </label>
      </li>`).join("");
+
     }
-  
+
+    if (event.target.innerText === "Weekly") {
+      weekly.classList.toggle("hidden");
+      monday.innerHTML = tasks[event.target.innerText]["Monday"].map(el => `<li>${el}</li>`).join("");
+      tuesday.innerHTML = tasks[event.target.innerText]["Tuesday"].map(el => `<li>${el}</li>`).join("");
+    }
+
   });

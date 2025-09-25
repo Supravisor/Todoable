@@ -10,7 +10,7 @@
   background: rgb(200, 200, 200);
   border: 1px solid blue;
   border-radius: 6px;
-  padding: 7px 12px;
+  padding: 11px 12px;
 }
 
 #anchor li:active {
@@ -24,7 +24,7 @@ h2 {
   margin-left: 1.8em;
 }
 
-#task-list {
+#task-list, li {
   font-family: Arial;
 }
 
@@ -46,4 +46,26 @@ input {
 
 label {
   margin-top: -1.35em;
+}
+
+/* Weekly */
+
+.day li {
+ padding-top: 1em;
+}
+
+@media (min-width: 1000px) {
+
+  .weekly {
+    display: flex;
+  }
+
+  .day {
+    width: calc(100vw/7);
+  }
+
+}
+
+.hidden {
+  display: none;
 }
