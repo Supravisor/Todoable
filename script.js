@@ -22,6 +22,9 @@ const periods = anchor.innerText.split(" ")
 
 const taskList = document.getElementById("task-list");
 
+// weekly
+const weekly = document.getElementById("weekly");
+
   anchor.addEventListener("click", event => {
 
     if (event.target.innerText === "Daily") {
