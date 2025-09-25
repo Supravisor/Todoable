@@ -1,9 +1,13 @@
 
 let tasks = {
   "Daily": {
-    "Recurring": ["check phone messages", "check emails"]
+    "Recurring": ["voicemail", "email"]
   },
-  "Weekly": ["Progress updates"],
+  "Weekly": {
+    "Monday": ["Progress updates"],
+    "Tuesday": ["tacos", "staff meeting"],
+    "Wednesday": ["client lunch"]
+   },
   "Monthly": ["Status reports"]
 }
 
