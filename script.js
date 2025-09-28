@@ -29,6 +29,7 @@ const tuesday = document.getElementById("Tuesday");
 
 // monthly
 const thisDate = new Date();
+let thisDay = thisDate.getDate();
 
   anchor.addEventListener("click", event => {
 
