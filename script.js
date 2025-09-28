@@ -27,6 +27,9 @@ const weekly = document.getElementById("weekly");
 const monday = document.getElementById("Monday");
 const tuesday = document.getElementById("Tuesday");
 
+// monthly
+const thisDate = new Date();
+
   anchor.addEventListener("click", event => {
 
     // daily
