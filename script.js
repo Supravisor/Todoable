@@ -29,6 +29,7 @@ const tuesday = document.getElementById("Tuesday");
 
   anchor.addEventListener("click", event => {
 
+    // daily
     if (event.target.innerText === "Daily") {
 
       if (weekly.classList[0] === "weekly") {
@@ -47,10 +48,16 @@ const tuesday = document.getElementById("Tuesday");
 
     }
 
+    // weekly
     if (event.target.innerText === "Weekly") {
       weekly.classList.toggle("hidden");
       monday.innerHTML = tasks[event.target.innerText]["Monday"].map(el => `<li>${el}</li>`).join("");
       tuesday.innerHTML = tasks[event.target.innerText]["Tuesday"].map(el => `<li>${el}</li>`).join("");
+    }
+
+    // monthly
+    if (event.target.innerText === "Monthly") {
+
     }
 
   });
