@@ -56,6 +56,8 @@ const tuesday = document.getElementById("Tuesday");
     }
 
     // monthly
+    const table = document.querySelector("table");
+
     if (event.target.innerText === "Monthly") {
 
     }
