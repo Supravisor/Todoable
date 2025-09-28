@@ -70,6 +70,12 @@ let incrementor = 0;
 
     if (event.target.innerText === "Monthly") {
 
+      for (let j = 0; j < months.length; j++) {
+        let date = new Date(diff + incrementor)
+        months[j].innerHTML = `${new Date(date + incrementor).toLocaleString("default", { weekday: "short" })} ${date.getDate()}`;
+        incrementor += 1000*24*60*60;
+      }
+
     }
 
   });
