@@ -72,6 +72,10 @@ let incrementor = 0;
 
         month.classList.toggle("hidden");
 
+      if (taskList.classList[1] !== "hidden") {
+        taskList.classList.add("hidden");
+      }
+
         incrementor = 0;
 
       for (let j = 0; j < months.length; j++) {
