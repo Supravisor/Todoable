@@ -76,6 +76,10 @@ let incrementor = 0;
         taskList.classList.add("hidden");
       }
 
+      if (weekly.classList[1] !== "hidden") {
+        weekly.classList.add("hidden");
+      }
+
         incrementor = 0;
 
       for (let j = 0; j < months.length; j++) {
