@@ -70,6 +70,8 @@ let incrementor = 0;
 
     if (event.target.innerText === "Monthly") {
 
+        month.classList.toggle("hidden");
+
         incrementor = 0;
 
       for (let j = 0; j < months.length; j++) {
