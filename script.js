@@ -31,6 +31,7 @@ const tuesday = document.getElementById("Tuesday");
 const thisDate = new Date();
 let thisDay = thisDate.getDate();
 let thisMonth = thisDate.getMonth();
+let thisYear = thisDate.getFullYear();
 
   anchor.addEventListener("click", event => {
 
