@@ -33,6 +33,8 @@ let thisDay = thisDate.getDate();
 let thisMonth = thisDate.getMonth();
 let thisYear = thisDate.getFullYear();
 
+let diff = new Date(thisYear, thisMonth, thisDay).getTime();
+
   anchor.addEventListener("click", event => {
 
     // daily
