@@ -41,8 +41,12 @@ let incrementor = 0;
     // daily
     if (event.target.innerText === "Daily") {
 
-      if (weekly.classList[0] === "weekly") {
+      if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
+      }
+
+      if (taskList.classList[1] !== "hidden") {
+        month.classList.add("hidden");
       }
 
        taskList.innerHTML = ``;
