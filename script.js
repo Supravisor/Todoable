@@ -42,6 +42,7 @@ let incrementor = 0;
     if (event.target.innerText === "Daily") {
 
       title.classList.toggle("hidden");
+      taskList.classList.toggle("hidden");
 
       if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
@@ -51,7 +52,6 @@ let incrementor = 0;
         month.classList.add("hidden");
       }
 
-       taskList.innerHTML = ``;
        title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
        taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
        <input type="checkbox" />
