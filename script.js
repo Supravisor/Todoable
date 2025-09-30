@@ -41,6 +41,8 @@ let incrementor = 0;
     // daily
     if (event.target.innerText === "Daily") {
 
+      title.classList.toggle("hidden");
+
       if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
       }
