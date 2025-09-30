@@ -45,7 +45,7 @@ let incrementor = 0;
         weekly.classList.add("hidden");
       }
 
-      if (taskList.classList[1] !== "hidden") {
+      if (month.classList[1] !== "hidden") {
         month.classList.add("hidden");
       }
 
@@ -69,6 +69,9 @@ let incrementor = 0;
       if (taskList.classList[1] !== "hidden") {
         taskList.classList.add("hidden");
       }
+      if (title.classList[1] !== "hidden") {
+        title.classList.add("hidden");
+      }
 
       if (month.classList[1] !== "hidden") {
         month.classList.add("hidden");
@@ -84,10 +87,14 @@ let incrementor = 0;
 
     if (event.target.innerText === "Monthly") {
 
-        month.classList.toggle("hidden");
+      month.classList.toggle("hidden");
 
       if (taskList.classList[1] !== "hidden") {
         taskList.classList.add("hidden");
+      }
+
+      if (title.classList[1] !== "hidden") {
+        title.classList.add("hidden");
       }
 
       if (weekly.classList[1] !== "hidden") {
