@@ -69,6 +69,9 @@ let incrementor = 0;
       if (taskList.classList[1] !== "hidden") {
         taskList.classList.add("hidden");
       }
+      if (title.classList[1] !== "hidden") {
+        title.classList.add("hidden");
+      }
 
       if (month.classList[1] !== "hidden") {
         month.classList.add("hidden");
