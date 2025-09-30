@@ -41,8 +41,12 @@ let incrementor = 0;
     // daily
     if (event.target.innerText === "Daily") {
 
-      if (weekly.classList[0] === "weekly") {
+      if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
+      }
+
+      if (taskList.classList[1] !== "hidden") {
+        month.classList.add("hidden");
       }
 
        taskList.innerHTML = ``;
@@ -60,6 +64,11 @@ let incrementor = 0;
     // weekly
     if (event.target.innerText === "Weekly") {
       weekly.classList.toggle("hidden");
+
+      if (month.classList[1] !== "hidden") {
+        month.classList.add("hidden");
+      }
+
       monday.innerHTML = tasks[event.target.innerText]["Monday"].map(el => `<li>${el}</li>`).join("");
       tuesday.innerHTML = tasks[event.target.innerText]["Tuesday"].map(el => `<li>${el}</li>`).join("");
     }
