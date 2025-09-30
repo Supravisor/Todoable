@@ -63,7 +63,12 @@ let incrementor = 0;
 
     // weekly
     if (event.target.innerText === "Weekly") {
+
       weekly.classList.toggle("hidden");
+
+      if (taskList.classList[1] !== "hidden") {
+        taskList.classList.add("hidden");
+      }
 
       if (month.classList[1] !== "hidden") {
         month.classList.add("hidden");
