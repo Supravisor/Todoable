@@ -60,6 +60,11 @@ let incrementor = 0;
     // weekly
     if (event.target.innerText === "Weekly") {
       weekly.classList.toggle("hidden");
+
+      if (month.classList[1] !== "hidden") {
+        month.classList.add("hidden");
+      }
+
       monday.innerHTML = tasks[event.target.innerText]["Monday"].map(el => `<li>${el}</li>`).join("");
       tuesday.innerHTML = tasks[event.target.innerText]["Tuesday"].map(el => `<li>${el}</li>`).join("");
     }
