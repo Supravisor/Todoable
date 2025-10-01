@@ -80,6 +80,12 @@ let incrementor = 0;
         month.classList.add("hidden");
       }
 
+      for (let i = 0; i < days.length; i++) {
+        let weeklyDate = new Date(diff + incrementor)
+        days[i].innerHTML = `${new Date(weeklyDate + incrementor).toLocaleString("default", { weekday: "short" })} ${date.getDate()}`;
+        incrementor += 1000*24*60*60;
+      }
+
       monday.innerHTML = tasks[event.target.innerText]["Monday"].map(el => `<li>${el}</li>`).join("");
       tuesday.innerHTML = tasks[event.target.innerText]["Tuesday"].map(el => `<li>${el}</li>`).join("");
     }
