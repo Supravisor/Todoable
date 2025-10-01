@@ -82,7 +82,7 @@ let incrementor = 0;
 
       for (let i = 0; i < days.length; i++) {
         let weeklyDate = new Date(diff + incrementor)
-        days[i].innerHTML = `${new Date(weeklyDate + incrementor).toLocaleString("default", { weekday: "short" })} ${date.getDate()}`;
+        days[i].innerHTML = `${new Date(weeklyDate + incrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}`;
         incrementor += 1000*24*60*60;
       }
 
