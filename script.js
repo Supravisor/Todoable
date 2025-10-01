@@ -23,6 +23,7 @@ const periods = anchor.innerText.split(" ")
 const taskList = document.getElementById("task-list");
 
 // weekly
+const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const monday = document.getElementById("Monday");
 const tuesday = document.getElementById("Tuesday");
@@ -65,6 +66,7 @@ let incrementor = 0;
 
     // weekly
     if (event.target.innerText === "Weekly") {
+      let weeklyIncrementor = 0;
 
       weekly.classList.toggle("hidden");
 
@@ -77,6 +79,12 @@ let incrementor = 0;
 
       if (month.classList[1] !== "hidden") {
         month.classList.add("hidden");
+      }
+
+      for (let i = 0; i < days.length; i++) {
+        let weeklyDate = new Date(diff + weeklyIncrementor)
+        days[i].innerHTML = `${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}`;
+        weeklyIncrementor += 1000*24*60*60;
       }
 
       monday.innerHTML = tasks[event.target.innerText]["Monday"].map(el => `<li>${el}</li>`).join("");
