@@ -82,9 +82,9 @@ let incrementor = 0;
       }
 
       for (let i = 0; i < days.length; i++) {
-        let weeklyDate = new Date(diff + incrementor)
-        days[i].innerHTML = `${new Date(weeklyDate + incrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}`;
-        incrementor += 1000*24*60*60;
+        let weeklyDate = new Date(diff + weeklyIncrementor)
+        days[i].innerHTML = `${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}`;
+        weeklyIncrementor += 1000*24*60*60;
       }
 
       monday.innerHTML = tasks[event.target.innerText]["Monday"].map(el => `<li>${el}</li>`).join("");
