@@ -66,6 +66,7 @@ let incrementor = 0;
 
     // weekly
     if (event.target.innerText === "Weekly") {
+      let weeklyIncrementor = 0;
 
       weekly.classList.toggle("hidden");
 
