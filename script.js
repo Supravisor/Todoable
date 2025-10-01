@@ -23,6 +23,7 @@ const periods = anchor.innerText.split(" ")
 const taskList = document.getElementById("task-list");
 
 // weekly
+const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const monday = document.getElementById("Monday");
 const tuesday = document.getElementById("Tuesday");
