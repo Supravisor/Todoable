@@ -33,13 +33,17 @@ button:active {
   border-radius: 6px;
 }
 
+.form-control, .task-label, #insert-daily-task {
+  display: block;
+  margin: 8px;
+}
+
 .form-control {
   width: calc(100% - 16px);
 }
 
-.form-control, .task-label, #insert-daily-task {
-  display: block;
-  margin: 8px;
+label {
+  font-family: Arial;
 }
 
 h2 {
