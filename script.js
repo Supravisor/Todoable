@@ -142,4 +142,5 @@ let incrementor = 0;
   });
 
   addDaily.addEventListener("click", event => {
+    addDaily.classList.toggle("hidden");
   });
