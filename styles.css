@@ -23,6 +23,7 @@ button:active {
   color: black;
 }
 
+/* daily */
 #add-daily-task {
   text-align: center;
 }
@@ -30,6 +31,11 @@ button:active {
 #insert-daily {
   border: 2px solid black;
   border-radius: 6px;
+}
+
+.form-control {
+  display: block;
+  margin: 8px;
 }
 
 h2 {
