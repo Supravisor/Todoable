@@ -23,9 +23,10 @@ const periods = anchor.innerText.split(" ")
 
 // daily
 const addDailyTask = document.getElementById("add-daily-task");
+const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
 const adHocTitle = document.getElementById("ad-hoc-title");
-const adHocList = document.getElementById("adhoc-list");
+const adHocList = document.getElementById("ad-hoc-list");
 
 // weekly
 const days = document.querySelectorAll("h2");
