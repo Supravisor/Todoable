@@ -18,7 +18,7 @@ const anchor = document.getElementById("anchor");
 
 const periods = anchor.innerText.split(" ")
 
-  anchor.innerHTML = periods.map(el => `<li>${el}</li>`).join("");
+  anchor.innerHTML = periods.map(el => `<button>${el}</button>`).join("");
 
 const taskList = document.getElementById("task-list");
 
