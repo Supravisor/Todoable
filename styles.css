@@ -29,6 +29,7 @@ button:active {
 
 #insert-daily {
   border: 2px solid black;
+  border-radius: 6px;
 }
 
 h2 {
