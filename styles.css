@@ -33,7 +33,7 @@ button:active {
   border-radius: 6px;
 }
 
-.form-control, .task-label {
+.form-control, .task-label, #insert-daily-task {
   display: block;
   margin: 8px;
 }
