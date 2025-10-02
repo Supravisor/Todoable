@@ -3,6 +3,7 @@ body {
   margin: 16px;
 }
 
+/* nav */
 #anchor {
   list-style: none;
   display: flex;
@@ -24,6 +25,10 @@ button:active {
 
 #add-daily-task {
   text-align: center;
+}
+
+#insert-daily {
+  border: 2px solid black;
 }
 
 h2 {
