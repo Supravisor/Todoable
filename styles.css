@@ -33,7 +33,7 @@ button:active {
   border-radius: 6px;
 }
 
-.form-control {
+.form-control, .task-label {
   display: block;
   margin: 8px;
 }
