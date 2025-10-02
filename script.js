@@ -68,8 +68,15 @@ let incrementor = 0;
        </label>
      </li>`).join("");
 
-       // recurring
+       // ad hoc
        adHocTitle.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
+       adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
+       <input type="checkbox" />
+     <li>
+       <label>
+         ${el}
+       </label>
+     </li>`).join("");
 
     }
 
