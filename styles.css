@@ -39,7 +39,7 @@ button:active {
 }
 
 .form-control {
-  width: calc(100% - 16px);
+  width: calc(100% - 24px);
 }
 
 label {
