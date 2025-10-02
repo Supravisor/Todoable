@@ -22,6 +22,10 @@ button:active {
   color: black;
 }
 
+#add-daily-task {
+  text-align: center;
+}
+
 h2 {
   font-family: Tahoma;
   padding-top: 2em;
