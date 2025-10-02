@@ -59,6 +59,10 @@ li {
   list-style: none;
 }
 
+label {
+  font-family: Arial;
+}
+
 input {
   height: 44px;
   width: 44px;
