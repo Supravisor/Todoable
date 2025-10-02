@@ -22,7 +22,6 @@ const periods = anchor.innerText.split(" ")
   anchor.innerHTML = periods.map(el => `<button>${el}</button>`).join("");
 
 // daily
-const addDailyTask = document.getElementById("add-daily-task");
 const addDaily = document.getElementById("add-daily");
 const insertDaily = document.getElementById("insert-daily");
 const title = document.getElementById("title");
@@ -140,4 +139,7 @@ let incrementor = 0;
 
     }
 
+  });
+
+  addDaily.addEventListener("click", event => {
   });
