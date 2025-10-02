@@ -28,12 +28,12 @@ button:active {
   text-align: center;
 }
 
-#insert-daily {
+#insert-daily-task {
   border: 2px solid black;
   border-radius: 6px;
 }
 
-.form-control, .task-label, #insert-daily-task {
+.form-control, .task-label, #insert-daily {
   display: block;
   margin: 8px;
 }
