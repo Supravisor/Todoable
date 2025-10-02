@@ -23,6 +23,7 @@ const periods = anchor.innerText.split(" ")
 
 // daily
 const addDailyTask = document.getElementById("add-daily-task");
+const addDaily = document.getElementById("add-daily");
 const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
 const adHocTitle = document.getElementById("ad-hoc-title");
