@@ -20,6 +20,8 @@ const periods = anchor.innerText.split(" ")
 
   anchor.innerHTML = periods.map(el => `<button>${el}</button>`).join("");
 
+// daily
+const addDailyTask = document.getElementById("add-daily-task");
 const taskList = document.getElementById("task-list");
 
 // weekly
