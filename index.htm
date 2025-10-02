@@ -22,13 +22,17 @@
     <button id="add-daily-task">Add task</button>
   </div>
 
-  <div>
+  <div id="insert-daily">
+    <label class="task-label" for="daily-input">Task</label>
+    <input required type="text" class="form-control" id="daily-input" placeholder="hh:mm Please enter your task here." />
     <button id="insert-daily-task">Insert</button>
   </div>
 
   <div id="title" class="hidden"></div>
-
   <ul id="task-list" class="hidden"></ul>
+
+  <div id="ad-hoc-title"></div>
+  <ul id="ad-hoc-list"></ul>
 
   <!-- weekly tasks -->
   <div id="weekly" class="weekly hidden">

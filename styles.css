@@ -3,6 +3,7 @@ body {
   margin: 16px;
 }
 
+/* nav */
 #anchor {
   list-style: none;
   display: flex;
@@ -20,6 +21,29 @@ button {
 button:active {
   background: white;
   color: black;
+}
+
+/* daily */
+#add-daily-task {
+  text-align: center;
+}
+
+#insert-daily {
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+.form-control, .task-label, #insert-daily-task {
+  display: block;
+  margin: 8px;
+}
+
+.form-control {
+  width: calc(100% - 24px);
+}
+
+label {
+  font-family: Arial;
 }
 
 h2 {
@@ -41,6 +65,10 @@ h2 {
 
 li {
   list-style: none;
+}
+
+label {
+  font-family: Arial;
 }
 
 input {

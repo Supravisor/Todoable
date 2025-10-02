@@ -23,6 +23,8 @@ const periods = anchor.innerText.split(" ")
 // daily
 const addDailyTask = document.getElementById("add-daily-task");
 const taskList = document.getElementById("task-list");
+const adHocTitle = document.getElementById("ad-hoc-title");
+const adHocList = document.getElementById("adhoc-list");
 
 // weekly
 const days = document.querySelectorAll("h2");
@@ -55,14 +57,18 @@ let incrementor = 0;
         month.classList.add("hidden");
       }
 
-       title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
-       taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
+      // recurring
+      title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
+      taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
        <input type="checkbox" />
      <li>
        <label>
          ${el}
        </label>
      </li>`).join("");
+
+       // recurring
+       adHocTitle.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
 
     }
 
