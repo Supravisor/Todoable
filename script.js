@@ -51,6 +51,7 @@ let incrementor = 0;
     // daily
     if (event.target.innerText === "Daily") {
 
+      addDaily.classList.toggle("hidden");
       title.classList.toggle("hidden");
       taskList.classList.toggle("hidden");
 
