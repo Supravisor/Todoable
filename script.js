@@ -31,6 +31,7 @@ const adHocTitle = document.getElementById("ad-hoc-title");
 const adHocList = document.getElementById("ad-hoc-list");
 
 // weekly
+const addDaily = document.getElementById("add-daily");
 const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const monday = document.getElementById("Monday");
