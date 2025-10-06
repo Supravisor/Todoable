@@ -152,4 +152,19 @@ let incrementor = 0;
   });
 
   insertDaily.addEventListener("click", event => {
+    if (dailyInput.value === "") {
+      return
+    } else {
+        tasks["Daily"]["Ad hoc"].push(dailyInput.value);
+        dailyInput.value = "";
+       // ad hoc
+       adHocTitle.innerHTML = `<h2>${Object.keys(tasks["Daily"])[1]}</h2>`;
+       adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+       <input type="checkbox" />
+     <li>
+       <label>
+         ${el}
+       </label>
+     </li>`).join("");
+    }
   });
