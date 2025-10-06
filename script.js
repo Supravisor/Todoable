@@ -146,7 +146,7 @@ let incrementor = 0;
 
   addDaily.addEventListener("click", event => {
     addDaily.classList.toggle("hidden");
-    insertDaily.classList.toggle("hidden");
+    insertDailyTask.classList.toggle("hidden");
     title.classList.toggle("hidden");
     taskList.classList.toggle("hidden");
   });
@@ -157,7 +157,8 @@ let incrementor = 0;
     } else {
         tasks["Daily"]["Ad hoc"].push(dailyInput.value);
         dailyInput.value = "";
-       // ad hoc
+
+      // ad hoc
        adHocTitle.innerHTML = `<h2>${Object.keys(tasks["Daily"])[1]}</h2>`;
        adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
        <input type="checkbox" />
@@ -166,5 +167,10 @@ let incrementor = 0;
          ${el}
        </label>
      </li>`).join("");
+
+        addDaily.classList.toggle("hidden");
+        title.classList.toggle("hidden");
+        taskList.classList.toggle("hidden");
+        insertDailyTask.classList.toggle("hidden");
     }
   });
