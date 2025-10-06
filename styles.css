@@ -56,7 +56,7 @@ h2 {
   font-family: Arial;
 }
 
-#task-list li {
+#task-list li, #ad-hoc-list li {
   font-size: 1.5rem;
   padding-bottom: 1em;
   margin-top: -40px;
