@@ -1,6 +1,7 @@
 
 body {
   margin: 16px;
+  font-family: Arial;
 }
 
 /* nav */
@@ -46,18 +47,10 @@ button:active {
   width: calc(100% - 24px);
 }
 
-label {
-  font-family: Arial;
-}
-
 h2 {
   font-family: Tahoma;
   padding-top: 2em;
   margin-left: 1.8em;
-}
-
-#task-list, li {
-  font-family: Arial;
 }
 
 #task-list li, #ad-hoc-list li {
@@ -69,10 +62,6 @@ h2 {
 
 li {
   list-style: none;
-}
-
-label {
-  font-family: Arial;
 }
 
 input {
