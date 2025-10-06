@@ -33,9 +33,12 @@ button:active {
   border-radius: 6px;
 }
 
-.form-control, .task-label, #insert-daily {
+.form-control, .task-label {
   display: block;
-  margin: 8px;
+}
+
+#insert-daily {
+  margin: 8px; 
 }
 
 .form-control {
