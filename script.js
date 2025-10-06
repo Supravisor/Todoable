@@ -150,3 +150,6 @@ let incrementor = 0;
     title.classList.toggle("hidden");
     taskList.classList.toggle("hidden");
   });
+
+  insertDaily.addEventListener("click", event => {
+  });
