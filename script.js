@@ -29,6 +29,7 @@ const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
 const adHocTitle = document.getElementById("ad-hoc-title");
 const adHocList = document.getElementById("ad-hoc-list");
+const dailyInput = document.getElementById("daily-input");
 
 // weekly
 const days = document.querySelectorAll("h2");
@@ -50,6 +51,7 @@ let incrementor = 0;
     // daily
     if (event.target.innerText === "Daily") {
 
+      addDaily.classList.toggle("hidden");
       title.classList.toggle("hidden");
       taskList.classList.toggle("hidden");
 
@@ -147,4 +149,22 @@ let incrementor = 0;
     insertDaily.classList.toggle("hidden");
     title.classList.toggle("hidden");
     taskList.classList.toggle("hidden");
+  });
+
+  insertDaily.addEventListener("click", event => {
+    if (dailyInput.value === "") {
+      return
+    } else {
+        tasks["Daily"]["Ad hoc"].push(dailyInput.value);
+        dailyInput.value = "";
+       // ad hoc
+       adHocTitle.innerHTML = `<h2>${Object.keys(tasks["Daily"])[1]}</h2>`;
+       adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+       <input type="checkbox" />
+     <li>
+       <label>
+         ${el}
+       </label>
+     </li>`).join("");
+    }
   });
