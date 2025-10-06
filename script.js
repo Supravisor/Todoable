@@ -29,6 +29,7 @@ const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
 const adHocTitle = document.getElementById("ad-hoc-title");
 const adHocList = document.getElementById("ad-hoc-list");
+const dailyInput = document.getElementById("daily-input");
 
 // weekly
 const days = document.querySelectorAll("h2");
