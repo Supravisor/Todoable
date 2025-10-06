@@ -35,6 +35,7 @@ button:active {
 
 .form-control, .task-label {
   display: block;
+  margin: 8px; 
 }
 
 #insert-daily {
