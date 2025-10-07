@@ -54,6 +54,8 @@ let incrementor = 0;
       addDaily.classList.toggle("hidden");
       title.classList.toggle("hidden");
       taskList.classList.toggle("hidden");
+      adHocTitle.classList.toggle("hidden");
+      adHocList.classList.toggle("hidden");
 
       if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
