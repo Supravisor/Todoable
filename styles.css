@@ -29,6 +29,12 @@ button:active {
   text-align: center;
 }
 
+#task {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 8px;
+}
+
 #insert-daily-task {
   border: 2px solid black;
   border-radius: 6px;
