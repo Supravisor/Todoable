@@ -184,7 +184,7 @@ let incrementor = 0;
 
   closeAdHoc.addEventListener("click", event => {
     addDaily.classList.remove("hidden");
-    title.classList.toggle("hidden");
-    taskList.classList.toggle("hidden");
+    title.classList.remove("hidden");
+    taskList.classList.remove("hidden");
     insertDailyTask.classList.toggle("hidden");
   });
