@@ -177,11 +177,11 @@ let incrementor = 0;
         insertDailyTask.classList.toggle("hidden");
     }
 
+  });
+
   closeAdHoc.addEventListener("click", event => {
     addDaily.classList.toggle("hidden");
     title.classList.toggle("hidden");
     taskList.classList.toggle("hidden");
     insertDailyTask.classList.toggle("hidden");
-  });
-
   });
