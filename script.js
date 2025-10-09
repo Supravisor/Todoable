@@ -103,6 +103,10 @@ let incrementor = 0;
 
       weekly.classList.toggle("hidden");
 
+      if (insertDailyTask.classList !== "hidden") {
+        addDaily.classList.add("hidden");
+      }
+
       if (taskList.classList[1] !== "hidden") {
         taskList.classList.add("hidden");
       }
@@ -144,6 +148,10 @@ let incrementor = 0;
       }
 
       month.classList.toggle("hidden");
+
+      if (insertDailyTask.classList !== "hidden") {
+        addDaily.classList.add("hidden");
+      }
 
       if (taskList.classList[1] !== "hidden") {
         taskList.classList.add("hidden");
@@ -192,9 +200,9 @@ let incrementor = 0;
         tasks["Daily"]["Ad hoc"].push(dailyInput.value);
         dailyInput.value = "";
 
-      // ad hoc
-       adHocTitle.innerHTML = `<h2>${Object.keys(tasks["Daily"])[1]}</h2>`;
-       adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+        // ad hoc
+        adHocTitle.innerHTML = `<h2>${Object.keys(tasks["Daily"])[1]}</h2>`;
+        adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
        <input type="checkbox" />
      <li>
        <label>
