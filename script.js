@@ -12,6 +12,7 @@ let tasks = {
   "Monthly": ["Status reports"]
 }
 
+//nav
 const timePeriod = Object.keys(tasks).join(" ").split(" ");
 const anchor = document.getElementById("anchor");
 
@@ -128,6 +129,10 @@ let incrementor = 0;
     const months = document.querySelectorAll("th");
 
     if (event.target.innerText === "Monthly") {
+
+      if (insertDailyTask.classList.length !== 1) {
+        return;
+      }
 
       month.classList.toggle("hidden");
 
