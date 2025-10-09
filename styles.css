@@ -5,6 +5,12 @@ body {
 }
 
 /* nav */
+nav {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 16px;
+}
+
 #anchor {
   list-style: none;
   display: flex;
