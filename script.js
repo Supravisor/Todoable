@@ -153,6 +153,14 @@ let incrementor = 0;
         title.classList.add("hidden");
       }
 
+      if (adHocTitle.classList[1] !== "hidden") {
+        adHocTitle.classList.add("hidden");
+      }
+
+      if (adHocList.classList[1] !== "hidden") {
+        adHocList.classList.add("hidden");
+      }
+
       if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
       }
@@ -177,8 +185,9 @@ let incrementor = 0;
   });
 
   insertDaily.addEventListener("click", event => {
+
     if (dailyInput.value === "") {
-      return
+      return;
     } else {
         tasks["Daily"]["Ad hoc"].push(dailyInput.value);
         dailyInput.value = "";
