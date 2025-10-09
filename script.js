@@ -179,6 +179,8 @@ let incrementor = 0;
 
         title.classList.remove("hidden");
         taskList.classList.remove("hidden");
+        adHocTitle.classList.remove("hidden");
+        adHocList.classList.remove("hidden");
     }
 
   });
