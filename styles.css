@@ -38,6 +38,7 @@ button:active {
 #insert-daily-task {
   border: 2px solid black;
   border-radius: 6px;
+  margin-top: 8px;
 }
 
 .form-control, .task-label {
