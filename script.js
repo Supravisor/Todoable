@@ -175,9 +175,12 @@ let incrementor = 0;
      </li>`).join("");
 
         addDaily.classList.toggle("hidden");
-        title.classList.toggle("hidden");
-        taskList.classList.toggle("hidden");
         insertDailyTask.classList.toggle("hidden");
+
+        title.classList.remove("hidden");
+        taskList.classList.remove("hidden");
+        adHocTitle.classList.remove("hidden");
+        adHocList.classList.remove("hidden");
     }
 
   });
