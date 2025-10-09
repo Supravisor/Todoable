@@ -12,7 +12,7 @@ let tasks = {
   "Monthly": ["Status reports"]
 }
 
-//nav
+// nav
 const timePeriod = Object.keys(tasks).join(" ").split(" ");
 const anchor = document.getElementById("anchor");
 
@@ -106,8 +106,17 @@ let incrementor = 0;
       if (taskList.classList[1] !== "hidden") {
         taskList.classList.add("hidden");
       }
+
       if (title.classList[1] !== "hidden") {
         title.classList.add("hidden");
+      }
+
+      if (adHocTitle.classList[1] !== "hidden") {
+        adHocTitle.classList.add("hidden");
+      }
+
+      if (adHocList.classList[1] !== "hidden") {
+        adHocList.classList.add("hidden");
       }
 
       if (month.classList[1] !== "hidden") {
