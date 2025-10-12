@@ -5,6 +5,7 @@ body {
 }
 
 /* nav */
+
 nav {
   position: fixed;
   bottom: 0;
@@ -15,7 +16,6 @@ nav {
 }
 
 #anchor {
-  list-style: none;
   display: flex;
   justify-content: space-evenly;
   font-family: Corbel;
@@ -44,8 +44,13 @@ button:active {
   padding-right: 8px;
 }
 
+h3 {
+  margin-top: 0.5em;
+  margin-bottom: -0.5em;
+}
+
 #insert-daily-task {
-  border: 2px solid black;
+  border: 2px solid blue;
   border-radius: 6px;
   margin-top: 8px;
 }
