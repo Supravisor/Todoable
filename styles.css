@@ -5,6 +5,7 @@ body {
 }
 
 /* nav */
+
 nav {
   position: fixed;
   bottom: 0;
@@ -15,7 +16,6 @@ nav {
 }
 
 #anchor {
-  list-style: none;
   display: flex;
   justify-content: space-evenly;
   font-family: Corbel;
@@ -42,6 +42,10 @@ button:active {
   display: flex;
   justify-content: space-between;
   padding-right: 8px;
+}
+
+h3 {
+  margin-top: 0.5em;
 }
 
 #insert-daily-task {
