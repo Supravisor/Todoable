@@ -44,6 +44,15 @@ button:active {
   padding-right: 8px;
 }
 
+.form-control, .task-label {
+  display: block;
+  margin: 8px; 
+}
+
+.form-control {
+  width: calc(100% - 30px);
+}
+
 h3 {
   margin-top: 0.5em;
   margin-bottom: -0.5em;
@@ -55,17 +64,15 @@ h3 {
   margin-top: 8px;
 }
 
-.form-control, .task-label {
-  display: block;
-  margin: 8px; 
-}
-
 #insert-daily {
-  margin: 8px; 
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-bottom: 8px;
 }
 
-.form-control {
-  width: calc(100% - 24px);
+#edit-daily-task {
+  margin-left: 2.5em;
+  margin-top: 4em;
 }
 
 h2 {
@@ -74,7 +81,7 @@ h2 {
   margin-left: 1.8em;
 }
 
-#task-list li, #ad-hoc-list li {
+#task-list li, #ad-hoc-list li, #edit-daily-task li {
   font-size: 1.5rem;
   padding-bottom: 1em;
   margin-top: -40px;
