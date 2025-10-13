@@ -232,3 +232,15 @@ let incrementor = 0;
 
     insertDailyTask.classList.toggle("hidden");
   });
+
+  editDaily.addEventListener("click", event => {
+
+      editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+       <input type="radio" name="edit" value="${el}" onclick="alert(this.value)" />
+     <li>
+       <label id="edit">
+         ${el}
+       </label>
+     </li>`).join("");
+
+  });
