@@ -25,6 +25,7 @@ const periods = anchor.innerText.split(" ")
 // daily
 const addDaily = document.getElementById("add-daily");
 const editDaily = document.getElementById("edit-daily");
+const editDailyTask = document.getElementById("edit-daily-task");
 const insertDailyTask = document.getElementById("insert-daily-task");
 const insertDaily = document.getElementById("insert-daily");
 const closeAdHoc = document.getElementById("close-ad-hoc");
