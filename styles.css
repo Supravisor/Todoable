@@ -76,7 +76,7 @@ h2 {
   margin-left: 1.8em;
 }
 
-#task-list li, #ad-hoc-list li {
+#task-list li, #ad-hoc-list li, #edit-daily-task li {
   font-size: 1.5rem;
   padding-bottom: 1em;
   margin-top: -40px;
