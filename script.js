@@ -2,7 +2,7 @@
 let tasks = {
   "Daily": {
     "Recurring": ["voicemail", "email"],
-    "Ad hoc": []
+    "Ad hoc": ["plan report", "design brief"]
   },
   "Weekly": {
     "Monday": ["Progress updates"],
@@ -24,10 +24,10 @@ const periods = anchor.innerText.split(" ")
 
 // daily
 const addDaily = document.getElementById("add-daily");
+const insertDaily = document.getElementById("insert-daily");
+const insertDailyTask = document.getElementById("insert-daily-task");
 const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
-const insertDailyTask = document.getElementById("insert-daily-task");
-const insertDaily = document.getElementById("insert-daily");
 const closeAdHoc = document.getElementById("close-ad-hoc");
 const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
@@ -187,6 +187,7 @@ let incrementor = 0;
 
   });
 
+  // add ad hoc
   addDaily.addEventListener("click", event => {
     addDaily.classList.toggle("hidden");
     insertDailyTask.classList.toggle("hidden");
@@ -194,6 +195,7 @@ let incrementor = 0;
     taskList.classList.toggle("hidden");
   });
 
+  // insert daily
   insertDaily.addEventListener("click", event => {
 
     if (dailyInput.value === "") {
@@ -223,6 +225,7 @@ let incrementor = 0;
 
   });
 
+  // close ad hoc
   closeAdHoc.addEventListener("click", event => {
     addDaily.classList.remove("hidden");
     title.classList.remove("hidden");
@@ -233,6 +236,7 @@ let incrementor = 0;
     insertDailyTask.classList.toggle("hidden");
   });
 
+  // edit ad hoc
   editDaily.addEventListener("click", event => {
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
