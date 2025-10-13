@@ -44,6 +44,11 @@ button:active {
   padding-right: 8px;
 }
 
+.form-control, .task-label {
+  display: block;
+  margin: 8px; 
+}
+
 h3 {
   margin-top: 0.5em;
   margin-bottom: -0.5em;
@@ -55,17 +60,10 @@ h3 {
   margin-top: 8px;
 }
 
-.form-control, .task-label {
-  display: block;
-  margin: 8px; 
-}
-
 #insert-daily {
-  margin: 8px; 
-}
-
-.form-control {
-  width: calc(100% - 24px);
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-bottom: 8px;
 }
 
 h2 {
