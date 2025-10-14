@@ -257,4 +257,6 @@ let incrementor = 0;
 
   deleteDaily.addEventListener("click", event => {
 
+    let removeItem = tasks["Daily"]["Ad hoc"];
+
   });
