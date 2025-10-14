@@ -254,3 +254,7 @@ let incrementor = 0;
   // delete daily
 
   const deleteAdHoc = item => removeAdHoc = item;
+
+  deleteDaily.addEventListener("click", event => {
+
+  });
