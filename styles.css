@@ -70,6 +70,7 @@ h3 {
   display: block;
   margin: auto;
   min-width: 300px;
+  max-width: 500px;
 }
 
 #insert-daily {
