@@ -75,6 +75,7 @@ h3 {
 
 .buttons {
  display: flex;
+ justify-content: space-around;
 }
 
 #insert-daily {
