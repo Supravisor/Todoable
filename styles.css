@@ -85,9 +85,12 @@ h3 {
 }
 
 h2 {
-  font-family: Tahoma;
   padding-top: 2em;
   margin-left: 1.8em;
+}
+
+h2, h3 {
+  font-family: Tahoma;
 }
 
 #task-list li, #ad-hoc-list li, #edit-daily-task li {
@@ -97,10 +100,7 @@ h2 {
   margin-left: 2.5em;
 }
 
-#edit-daily-task {
-  margin-left: 2.5em;
-  margin-top: 4em;
-}
+
 
 li {
   list-style: none;
