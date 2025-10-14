@@ -262,6 +262,7 @@ let incrementor = 0;
     for (let i = 0; i < removeItem.length; i++) {
       if (removeItem[i] === removeAdHoc) {
         tasks["Daily"]["Ad hoc"].splice(i, 1);
+        removeAdHoc = "";
       }
     }
 
