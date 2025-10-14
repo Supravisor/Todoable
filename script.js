@@ -259,4 +259,10 @@ let incrementor = 0;
 
     let removeItem = tasks["Daily"]["Ad hoc"];
 
+    for (let i = 0; i < removeItem.length; i++) {
+      if (removeItem[i] === removeAdHoc) {
+        tasks["Daily"]["Ad hoc"].splice(i, 1);
+      }
+    }
+
   });
