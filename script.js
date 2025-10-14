@@ -18,7 +18,7 @@ const anchor = document.getElementById("anchor");
 
   anchor.innerText = timePeriod.join(" ");
 
-const periods = anchor.innerText.split(" ")
+const periods = anchor.innerText.split(" ");
 
   anchor.innerHTML = periods.map(el => `<button>${el}</button>`).join("");
 
@@ -29,6 +29,7 @@ const insertDailyTask = document.getElementById("insert-daily-task");
 const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
 const deleteDaily = document.getElementById("delete-daily");
+let removeAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
 const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
@@ -196,7 +197,7 @@ let incrementor = 0;
     taskList.classList.toggle("hidden");
   });
 
-  // insert daily
+  // insert ad hoc
   insertDaily.addEventListener("click", event => {
 
     if (dailyInput.value === "") {
