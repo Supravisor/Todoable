@@ -64,21 +64,33 @@ h3 {
   margin-top: 8px;
 }
 
-#insert-daily {
+.edit {
+  border: 2px solid blue;
+  border-radius: 6px;
+  display: block;
+  margin: auto;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.buttons {
+ display: flex;
+ justify-content: space-around;
+}
+
+#insert-daily, #update-daily, #delete-daily {
   margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
 }
 
-#edit-daily-task {
-  margin-left: 2.5em;
-  margin-top: 4em;
-}
-
 h2 {
-  font-family: Tahoma;
   padding-top: 2em;
   margin-left: 1.8em;
+}
+
+h2, h3 {
+  font-family: Tahoma;
 }
 
 #task-list li, #ad-hoc-list li, #edit-daily-task li {
@@ -86,6 +98,12 @@ h2 {
   padding-bottom: 1em;
   margin-top: -40px;
   margin-left: 2.5em;
+}
+
+#edit-daily-task, #delete-daily-task {
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 li {
