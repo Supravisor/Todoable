@@ -18,7 +18,7 @@ const anchor = document.getElementById("anchor");
 
   anchor.innerText = timePeriod.join(" ");
 
-const periods = anchor.innerText.split(" ")
+const periods = anchor.innerText.split(" ");
 
   anchor.innerHTML = periods.map(el => `<button>${el}</button>`).join("");
 
@@ -28,6 +28,8 @@ const insertDaily = document.getElementById("insert-daily");
 const insertDailyTask = document.getElementById("insert-daily-task");
 const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
+const deleteDaily = document.getElementById("delete-daily");
+let removeAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
 const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
@@ -195,7 +197,7 @@ let incrementor = 0;
     taskList.classList.toggle("hidden");
   });
 
-  // insert daily
+  // insert ad hoc
   insertDaily.addEventListener("click", event => {
 
     if (dailyInput.value === "") {
@@ -240,7 +242,32 @@ let incrementor = 0;
   editDaily.addEventListener("click", event => {
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-       <input type="radio" name="edit" value="${el}" onclick="alert(this.value)" />
+       <input type="radio" name="edit" value="${el}" onclick="deleteAdHoc(this.value)" />
+     <li>
+       <label id="edit">
+         ${el}
+       </label>
+     </li>`).join("");
+
+  });
+
+  // delete daily
+
+  const deleteAdHoc = item => removeAdHoc = item;
+
+  deleteDaily.addEventListener("click", event => {
+
+    let removeItem = tasks["Daily"]["Ad hoc"];
+
+    for (let i = 0; i < removeItem.length; i++) {
+      if (removeItem[i] === removeAdHoc) {
+        tasks["Daily"]["Ad hoc"].splice(i, 1);
+        removeAdHoc = "";
+      }
+    }
+
+      editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+       <input type="radio" name="edit" value="${el}" onclick="deleteAdHoc(this.value)" />
      <li>
        <label id="edit">
          ${el}
