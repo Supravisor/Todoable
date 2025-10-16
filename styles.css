@@ -44,6 +44,13 @@ button:active {
   padding-right: 8px;
 }
 
+#edit {
+  display: block;
+  margin: auto;
+  min-width: 300px;
+  max-width: 500px;
+}
+
 .form-control, .task-label {
   display: block;
   margin: 8px; 
