@@ -243,7 +243,7 @@ let incrementor = 0;
   editDaily.addEventListener("click", event => {
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-       <input type="radio" name="edit" value="${el}" onclick="deleteAdHoc(this.value)" />
+       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
      <li>
        <label id="edit">
          ${el}
@@ -259,7 +259,7 @@ let incrementor = 0;
 
   // delete ad hoc
 
-  const deleteAdHoc = item => removeAdHoc = item;
+  const editAdHoc = item => removeAdHoc = item;
 
   deleteDaily.addEventListener("click", event => {
 
@@ -273,7 +273,7 @@ let incrementor = 0;
     }
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-       <input type="radio" name="edit" value="${el}" onclick="deleteAdHoc(this.value)" />
+       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
      <li>
        <label id="edit">
          ${el}
