@@ -252,7 +252,12 @@ let incrementor = 0;
 
   });
 
-  // delete daily
+  // update ad hoc
+  updateDaily.addEventListener("click", event => {
+    alert(123);
+  });
+
+  // delete ad hoc
 
   const deleteAdHoc = item => removeAdHoc = item;
 
