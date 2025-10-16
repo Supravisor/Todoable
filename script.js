@@ -261,6 +261,8 @@ let incrementor = 0;
       return;
     }
 
+    dailyModify.value = modifyAdHoc;
+
   });
 
   // delete ad hoc
