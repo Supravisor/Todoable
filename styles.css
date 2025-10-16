@@ -82,6 +82,14 @@ h3 {
   min-width: 300px;
   max-width: 500px;
 }
+
+#update-daily-task {
+  display: block;
+  margin: auto;
+  min-width: 300px;
+  max-width: 500px;
+}
+
 .buttons {
   display: flex;
   justify-content: space-around;
