@@ -254,7 +254,11 @@ let incrementor = 0;
 
   // update ad hoc
   updateDaily.addEventListener("click", event => {
-    alert(123);
+
+    if (modifyAdHoc == null || modifyAdHoc === "") {
+      return;
+    }
+
   });
 
   // delete ad hoc
