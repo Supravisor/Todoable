@@ -64,13 +64,9 @@ h3 {
   margin-top: 8px;
 }
 
-.edit {
+.tasks {
   border: 2px solid blue;
   border-radius: 6px;
-  display: block;
-  margin: auto;
-  min-width: 300px;
-  max-width: 500px;
 }
 
 .buttons {
