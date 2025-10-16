@@ -38,7 +38,7 @@ button:active {
   text-align: center;
 }
 
-#task {
+.task {
   display: flex;
   justify-content: space-between;
   padding-right: 8px;
