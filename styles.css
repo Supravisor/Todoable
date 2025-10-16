@@ -38,7 +38,7 @@ button:active {
   text-align: center;
 }
 
-#task {
+.task {
   display: flex;
   justify-content: space-between;
   padding-right: 8px;
@@ -58,15 +58,25 @@ h3 {
   margin-bottom: -0.5em;
 }
 
-#insert-daily-task {
+#insert-daily-task, #update-daily-task {
   border: 2px solid blue;
   border-radius: 6px;
   margin-top: 8px;
 }
 
-.edit {
+.tasks {
   border: 2px solid blue;
   border-radius: 6px;
+}
+
+#edit {
+  display: block;
+  margin: auto;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+#update-daily-task {
   display: block;
   margin: auto;
   min-width: 300px;
@@ -74,8 +84,8 @@ h3 {
 }
 
 .buttons {
- display: flex;
- justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 #insert-daily, #update-daily, #delete-daily {
