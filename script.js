@@ -30,7 +30,7 @@ const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
 const updateDaily = document.getElementById("update-daily");
 const deleteDaily = document.getElementById("delete-daily");
-let removeAdHoc;
+let modifyAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
 const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
@@ -243,7 +243,7 @@ let incrementor = 0;
   editDaily.addEventListener("click", event => {
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-       <input type="radio" name="edit" value="${el}" onclick="deleteAdHoc(this.value)" />
+       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
      <li>
        <label id="edit">
          ${el}
@@ -252,23 +252,28 @@ let incrementor = 0;
 
   });
 
-  // delete daily
+  // update ad hoc
+  updateDaily.addEventListener("click", event => {
+    alert(123);
+  });
 
-  const deleteAdHoc = item => removeAdHoc = item;
+  // delete ad hoc
+
+  const editAdHoc = item => modifyAdHoc = item;
 
   deleteDaily.addEventListener("click", event => {
 
     let removeItem = tasks["Daily"]["Ad hoc"];
 
     for (let i = 0; i < removeItem.length; i++) {
-      if (removeItem[i] === removeAdHoc) {
+      if (removeItem[i] === modifyAdHoc) {
         tasks["Daily"]["Ad hoc"].splice(i, 1);
-        removeAdHoc = "";
+        modifyAdHoc = "";
       }
     }
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-       <input type="radio" name="edit" value="${el}" onclick="deleteAdHoc(this.value)" />
+       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
      <li>
        <label id="edit">
          ${el}
