@@ -30,6 +30,7 @@ const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
 const updateDaily = document.getElementById("update-daily");
 const modifyDaily = document.getElementById("modify-daily");
+const dailyModify = document.getElementById("daily-modify");
 const deleteDaily = document.getElementById("delete-daily");
 let modifyAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
