@@ -30,7 +30,7 @@ const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
 const updateDaily = document.getElementById("update-daily");
 const deleteDaily = document.getElementById("delete-daily");
-let removeAdHoc;
+let modifyAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
 const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
@@ -259,16 +259,16 @@ let incrementor = 0;
 
   // delete ad hoc
 
-  const editAdHoc = item => removeAdHoc = item;
+  const editAdHoc = item => modifyAdHoc = item;
 
   deleteDaily.addEventListener("click", event => {
 
     let removeItem = tasks["Daily"]["Ad hoc"];
 
     for (let i = 0; i < removeItem.length; i++) {
-      if (removeItem[i] === removeAdHoc) {
+      if (removeItem[i] === modifyAdHoc) {
         tasks["Daily"]["Ad hoc"].splice(i, 1);
-        removeAdHoc = "";
+        modifyAdHoc = "";
       }
     }
 
