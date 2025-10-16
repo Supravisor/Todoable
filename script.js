@@ -28,6 +28,7 @@ const insertDaily = document.getElementById("insert-daily");
 const insertDailyTask = document.getElementById("insert-daily-task");
 const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
+const updateDaily = document.getElementById("update-daily");
 const deleteDaily = document.getElementById("delete-daily");
 let removeAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
