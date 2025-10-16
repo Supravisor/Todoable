@@ -29,6 +29,8 @@ const insertDailyTask = document.getElementById("insert-daily-task");
 const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
 const updateDaily = document.getElementById("update-daily");
+const modifyDaily = document.getElementById("modify-daily");
+const dailyModify = document.getElementById("daily-modify");
 const deleteDaily = document.getElementById("delete-daily");
 let modifyAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
@@ -254,7 +256,13 @@ let incrementor = 0;
 
   // update ad hoc
   updateDaily.addEventListener("click", event => {
-    alert(123);
+
+    if (modifyAdHoc == null || modifyAdHoc === "") {
+      return;
+    }
+
+    dailyModify.value = modifyAdHoc;
+
   });
 
   // delete ad hoc
