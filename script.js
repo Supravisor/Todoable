@@ -286,6 +286,7 @@ let incrementor = 0;
      </li>`).join("");
 
     edit.classList.toggle("hidden");
+    updateDailyTask.classList.toggle("hidden");
 
   });
 
