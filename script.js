@@ -26,9 +26,11 @@ const periods = anchor.innerText.split(" ");
 const addDaily = document.getElementById("add-daily");
 const insertDaily = document.getElementById("insert-daily");
 const insertDailyTask = document.getElementById("insert-daily-task");
+const edit = document.getElementById("edit");
 const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
 const updateDaily = document.getElementById("update-daily");
+const updateDailyTask = document.getElementById("update-daily-task");
 const modifyDaily = document.getElementById("modify-daily");
 const dailyModify = document.getElementById("daily-modify");
 const deleteDaily = document.getElementById("delete-daily");
@@ -262,6 +264,31 @@ let incrementor = 0;
     }
 
     dailyModify.value = modifyAdHoc;
+
+  });
+
+  // modify ad hoc
+  modifyDaily.addEventListener("click", event => {
+
+    let modifyItem = tasks["Daily"]["Ad hoc"];
+
+    for (let i = 0; i < modifyItem.length; i++) {
+      if (modifyItem[i] === modifyAdHoc) {
+        tasks["Daily"]["Ad hoc"][i] = dailyModify.value;
+        modifyAdHoc = "";
+      }
+    }
+
+      editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+     <li>
+       <label id="edit">
+         ${el}
+       </label>
+     </li>`).join("");
+
+    edit.classList.toggle("hidden");
+    updateDailyTask.classList.toggle("hidden");
 
   });
 
