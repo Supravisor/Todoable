@@ -254,6 +254,17 @@ let incrementor = 0;
 
   });
 
+  // update ad hoc
+  updateDaily.addEventListener("click", event => {
+
+    if (modifyAdHoc == null || modifyAdHoc === "") {
+      return;
+    }
+
+    dailyModify.value = modifyAdHoc;
+
+  });
+
   // modify ad hoc
   modifyDaily.addEventListener("click", event => {
 
@@ -274,16 +285,7 @@ let incrementor = 0;
        </label>
      </li>`).join("");
 
-  });
-
-  // update ad hoc
-  updateDaily.addEventListener("click", event => {
-
-    if (modifyAdHoc == null || modifyAdHoc === "") {
-      return;
-    }
-
-    dailyModify.value = modifyAdHoc;
+    edit.classList.toggle("hidden");
 
   });
 
