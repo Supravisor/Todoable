@@ -259,6 +259,14 @@ let incrementor = 0;
 
     let modifyItem = tasks["Daily"]["Ad hoc"];
 
+    for (let i = 0; i < modifyItem.length; i++) {
+      if (modifyItem[i] === modifyAdHoc) {
+        tasks["Daily"]["Ad hoc"][i] = dailyModify.value;
+        modifyAdHoc = "";
+      }
+
+    }
+
   });
 
   // update ad hoc
