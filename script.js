@@ -257,6 +257,8 @@ let incrementor = 0;
   // modify ad hoc
   modifyDaily.addEventListener("click", event => {
 
+    let modifyItem = tasks["Daily"]["Ad hoc"];
+
   });
 
   // update ad hoc
