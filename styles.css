@@ -70,14 +70,6 @@ h3 {
 }
 
 #edit {
-
-  margin: auto;
-  min-width: 300px;
-  max-width: 500px;
-}
-
-#update-daily-task {
-  display: block;
   margin: auto;
   min-width: 300px;
   max-width: 500px;
