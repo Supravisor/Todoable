@@ -264,8 +264,15 @@ let incrementor = 0;
         tasks["Daily"]["Ad hoc"][i] = dailyModify.value;
         modifyAdHoc = "";
       }
-
     }
+
+      editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+     <li>
+       <label id="edit">
+         ${el}
+       </label>
+     </li>`).join("");
 
   });
 
