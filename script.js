@@ -254,6 +254,11 @@ let incrementor = 0;
 
   });
 
+  // modify ad hoc
+  modifyDaily.addEventListener("click", event => {
+
+  });
+
   // update ad hoc
   updateDaily.addEventListener("click", event => {
 
