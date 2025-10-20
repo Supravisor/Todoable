@@ -55,7 +55,7 @@ button:active {
 
 h3 {
   margin-top: 0.5em;
-  margin-bottom: -0.5em;
+  margin-bottom: 1em;
 }
 
 #insert-daily-task, #update-daily-task {
@@ -69,15 +69,7 @@ h3 {
   border-radius: 6px;
 }
 
-#edit {
-  display: block;
-  margin: auto;
-  min-width: 300px;
-  max-width: 500px;
-}
-
-#update-daily-task {
-  display: block;
+#insert-daily-task, #edit, #update-daily-task {
   margin: auto;
   min-width: 300px;
   max-width: 500px;

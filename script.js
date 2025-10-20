@@ -265,6 +265,10 @@ let incrementor = 0;
 
     dailyModify.value = modifyAdHoc;
 
+    edit.classList.toggle("hidden");
+
+    updateDailyTask.classList.toggle("hidden");
+
   });
 
   // modify ad hoc
@@ -288,6 +292,7 @@ let incrementor = 0;
      </li>`).join("");
 
     edit.classList.toggle("hidden");
+
     updateDailyTask.classList.toggle("hidden");
 
   });
