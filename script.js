@@ -272,6 +272,13 @@ let incrementor = 0;
 
   });
 
+  // close edit ad hoc
+  closeEditAdHoc.addEventListener("click", event => {
+
+    edit.classList.toggle("hidden");
+
+  });
+
   // modify ad hoc
   modifyDaily.addEventListener("click", event => {
 
