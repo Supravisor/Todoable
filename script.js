@@ -29,6 +29,7 @@ const insertDailyTask = document.getElementById("insert-daily-task");
 const edit = document.getElementById("edit");
 const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
+const closeEditAdHoc = document.getElementById("close-edit-ad-hoc");
 const updateDaily = document.getElementById("update-daily");
 const updateDailyTask = document.getElementById("update-daily-task");
 const modifyDaily = document.getElementById("modify-daily");
