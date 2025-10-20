@@ -254,10 +254,6 @@ let incrementor = 0;
        </label>
      </li>`).join("");
 
-    edit.classList.toggle("hidden");
-
-    updateDailyTask.classList.toggle("hidden");
-
   });
 
   // update ad hoc
