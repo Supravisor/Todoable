@@ -279,6 +279,8 @@ let incrementor = 0;
   // close edit ad hoc
   closeEditAdHoc.addEventListener("click", event => {
 
+    modifyAdHoc = "";
+
     edit.classList.toggle("hidden");
 
   });
