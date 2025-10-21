@@ -244,8 +244,8 @@ let incrementor = 0;
     taskList.classList.remove("hidden");
     adHocTitle.classList.remove("hidden");
     adHocList.classList.remove("hidden");
-
     insertDailyTask.classList.toggle("hidden");
+    editDaily.classList.toggle("hidden");
   });
 
   // edit ad hoc
