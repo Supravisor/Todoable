@@ -239,6 +239,7 @@ let incrementor = 0;
 
   // close ad hoc
   closeAdHoc.addEventListener("click", event => {
+
     addDaily.classList.remove("hidden");
     title.classList.remove("hidden");
     taskList.classList.remove("hidden");
@@ -246,12 +247,14 @@ let incrementor = 0;
     adHocList.classList.remove("hidden");
     insertDailyTask.classList.toggle("hidden");
     editDaily.classList.toggle("hidden");
+
   });
 
   // edit ad hoc
   editDaily.addEventListener("click", event => {
 
     addDaily.classList.toggle("hidden");
+    editDaily.classList.toggle("hidden");
 
     modifyAdHoc = "";
 
