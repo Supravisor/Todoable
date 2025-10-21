@@ -203,6 +203,7 @@ let incrementor = 0;
     insertDailyTask.classList.toggle("hidden");
     title.classList.toggle("hidden");
     taskList.classList.toggle("hidden");
+    editDaily.classList.toggle("hidden");
   });
 
   // insert ad hoc
