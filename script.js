@@ -232,6 +232,7 @@ let incrementor = 0;
         taskList.classList.remove("hidden");
         adHocTitle.classList.remove("hidden");
         adHocList.classList.remove("hidden");
+        editDaily.classList.toggle("hidden");
     }
 
   });
