@@ -257,6 +257,8 @@ let incrementor = 0;
     editDaily.classList.toggle("hidden");
     title.classList.toggle("hidden");
     taskList.classList.toggle("hidden");
+    adHocTitle.classList.toggle("hidden");
+    adHocList.classList.toggle("hidden");
 
     modifyAdHoc = "";
 
