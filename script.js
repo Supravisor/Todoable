@@ -30,7 +30,6 @@ const edit = document.getElementById("edit");
 const editDaily = document.getElementById("edit-daily");
 const editDailyTask = document.getElementById("edit-daily-task");
 const closeEditAdHoc = document.getElementById("close-edit-ad-hoc");
-const closeUpdateAdHoc = document.getElementById("close-update-ad-hoc");
 const updateDaily = document.getElementById("update-daily");
 const updateDailyTask = document.getElementById("update-daily-task");
 const modifyDaily = document.getElementById("modify-daily");
@@ -38,6 +37,7 @@ const dailyModify = document.getElementById("daily-modify");
 const deleteDaily = document.getElementById("delete-daily");
 let modifyAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
+const closeUpdateAdHoc = document.getElementById("close-update-ad-hoc");
 const title = document.getElementById("title");
 const taskList = document.getElementById("task-list");
 const adHocTitle = document.getElementById("ad-hoc-title");
@@ -305,6 +305,25 @@ let incrementor = 0;
          ${el}
        </label>
      </li>`).join("");
+
+    edit.classList.toggle("hidden");
+
+    updateDailyTask.classList.toggle("hidden");
+
+  });
+
+  // close update ad hoc
+  closeUpdateAdHoc.addEventListener("click", event => {
+
+    editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+       <li>
+         <label id="edit">
+           ${el}
+         </label>
+       </li>`).join("");
+
+    modifyAdHoc = "";
 
     edit.classList.toggle("hidden");
 
