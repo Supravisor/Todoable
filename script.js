@@ -295,6 +295,12 @@ let incrementor = 0;
     modifyAdHoc = "";
 
     edit.classList.toggle("hidden");
+    addDaily.classList.toggle("hidden");
+    editDaily.classList.toggle("hidden");
+    title.classList.remove("hidden");
+    taskList.classList.remove("hidden");
+    adHocTitle.classList.remove("hidden");
+    adHocList.classList.remove("hidden");
 
   });
 
