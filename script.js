@@ -251,6 +251,8 @@ let incrementor = 0;
   // edit ad hoc
   editDaily.addEventListener("click", event => {
 
+    addDaily.classList.toggle("hidden");
+
     modifyAdHoc = "";
 
     editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
