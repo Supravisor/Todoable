@@ -66,6 +66,7 @@ let incrementor = 0;
 
       if (insertDailyTask.classList == "hidden") {
         addDaily.classList.toggle("hidden");
+        editDaily.classList.toggle("hidden");
       }
 
       title.classList.toggle("hidden");
