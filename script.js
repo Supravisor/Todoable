@@ -66,6 +66,7 @@ let incrementor = 0;
 
       if (insertDailyTask.classList == "hidden") {
         addDaily.classList.toggle("hidden");
+        editDaily.classList.toggle("hidden");
       }
 
       title.classList.toggle("hidden");
@@ -202,6 +203,7 @@ let incrementor = 0;
     insertDailyTask.classList.toggle("hidden");
     title.classList.toggle("hidden");
     taskList.classList.toggle("hidden");
+    editDaily.classList.toggle("hidden");
   });
 
   // insert ad hoc
@@ -230,23 +232,33 @@ let incrementor = 0;
         taskList.classList.remove("hidden");
         adHocTitle.classList.remove("hidden");
         adHocList.classList.remove("hidden");
+        editDaily.classList.toggle("hidden");
     }
 
   });
 
   // close ad hoc
   closeAdHoc.addEventListener("click", event => {
+
     addDaily.classList.remove("hidden");
     title.classList.remove("hidden");
     taskList.classList.remove("hidden");
     adHocTitle.classList.remove("hidden");
     adHocList.classList.remove("hidden");
-
     insertDailyTask.classList.toggle("hidden");
+    editDaily.classList.toggle("hidden");
+
   });
 
   // edit ad hoc
   editDaily.addEventListener("click", event => {
+
+    addDaily.classList.toggle("hidden");
+    editDaily.classList.toggle("hidden");
+    title.classList.toggle("hidden");
+    taskList.classList.toggle("hidden");
+    adHocTitle.classList.toggle("hidden");
+    adHocList.classList.toggle("hidden");
 
     modifyAdHoc = "";
 
