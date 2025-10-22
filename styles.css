@@ -141,6 +141,15 @@ label {
     width: calc(100vw/7);
   }
 
+  #all-tasks {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sub-tasks {
+    margin-left: -25vw;
+  }
+
 }
 
 .hidden {
