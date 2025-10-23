@@ -83,7 +83,7 @@ let incrementor = 0;
       }
 
       // recurring
-      title.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
+      title.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
       taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
        <input type="checkbox" />
      <li>
@@ -93,7 +93,7 @@ let incrementor = 0;
      </li>`).join("");
 
        // ad hoc
-       adHocTitle.innerHTML = `<h2>${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
+       adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
        adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
        <input type="checkbox" />
      <li>
@@ -216,7 +216,7 @@ let incrementor = 0;
         dailyInput.value = "";
 
         // ad hoc
-        adHocTitle.innerHTML = `<h2>${Object.keys(tasks["Daily"])[1]}</h2>`;
+        adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[1]}</h2>`;
         adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
        <input type="checkbox" />
      <li>
@@ -304,7 +304,7 @@ let incrementor = 0;
     adHocList.classList.remove("hidden");
 
     // recurring
-    title.innerHTML = `<h2>${Object.keys(tasks["Daily"])[0]}</h2>`;
+    title.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[0]}</h2>`;
     taskList.innerHTML = tasks["Daily"]["Recurring"].map(el => `
      <input type="checkbox" />
        <li>
@@ -314,7 +314,7 @@ let incrementor = 0;
        </li>`).join("");
 
      // ad hoc
-     adHocTitle.innerHTML = `<h2>${Object.keys(tasks["Daily"])[1]}</h2>`;
+     adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[1]}</h2>`;
      adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
      <input type="checkbox" />
        <li>
