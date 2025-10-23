@@ -103,6 +103,10 @@ h2 {
   font-size: 1.7em;
 }
 
+h3 {
+  font-size: 1.6em;
+}
+
 #task-list li, #ad-hoc-list li, #edit-daily-task li {
   font-size: 1.5rem;
   padding-bottom: 1em;
