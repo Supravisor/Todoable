@@ -90,13 +90,21 @@ input[type="text"] {
   padding-left: 0.5em;
 }
 
-h2 {
+.heading2 {
   padding-top: 2em;
   margin-left: 1.8em;
 }
 
 h2, h3 {
   font-family: Tahoma;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.6em;
 }
 
 #task-list li, #ad-hoc-list li, #edit-daily-task li {
