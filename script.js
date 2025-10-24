@@ -111,6 +111,14 @@ let incrementor = 0;
         return;
       }
 
+      if (edit.classList.length !== 2) {
+        return;
+      }
+
+      if (updateDailyTask.classList.length !== 1) {
+        return;
+      }
+
       let weeklyIncrementor = 0;
 
       weekly.classList.toggle("hidden");
