@@ -171,6 +171,10 @@ let incrementor = 0;
         return;
       }
 
+      if (updateDailyTask.classList.length !== 1) {
+        return;
+      }
+
       month.classList.toggle("hidden");
 
       if (insertDailyTask.classList !== "hidden") {
