@@ -188,6 +188,7 @@ let incrementor = 0;
 
       if (insertDailyTask.classList !== "hidden") {
         addDaily.classList.add("hidden");
+        editDaily.classList.add("hidden");
       }
 
       if (taskList.classList[1] !== "hidden") {
