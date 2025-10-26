@@ -64,6 +64,14 @@ let incrementor = 0;
     // daily
     if (event.target.innerText === "Daily") {
 
+      if (edit.classList.length !== 2) {
+        return;
+      }
+
+      if (updateDailyTask.classList.length !== 1) {
+        return;
+      }
+
       if (insertDailyTask.classList == "hidden") {
         addDaily.classList.toggle("hidden");
         editDaily.classList.toggle("hidden");
