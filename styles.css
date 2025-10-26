@@ -15,7 +15,7 @@ nav {
   background: white;
 }
 
-#anchor {
+#anchor, #add-edit-buttons {
   display: flex;
   justify-content: space-evenly;
   font-family: Corbel;
