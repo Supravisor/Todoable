@@ -5,9 +5,13 @@ let tasks = {
     "Ad hoc": ["plan report", "design brief"]
   },
   "Weekly": {
-    "Monday": ["Progress updates"],
-    "Tuesday": ["tacos", "staff meeting"],
-    "Wednesday": ["client lunch"]
+    "Mon": ["Progress updates"],
+    "Tue": ["tacos", "staff meeting"],
+    "Wed": ["client lunch"],
+    "Thu": ["Thursday", "Stuff"],
+    "Fri": ["Progress updates"],
+    "Sat": ["Sat"],
+    "Sun": ["Sunny"]
    },
   "Monthly": ["Status reports"]
 }
