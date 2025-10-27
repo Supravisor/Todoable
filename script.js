@@ -47,6 +47,7 @@ const dailyInput = document.getElementById("daily-input");
 // weekly
 const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
+const weekDay = document.querySelectorAll(".day");
 const monday = document.getElementById("Monday");
 const tuesday = document.getElementById("Tuesday");
 
