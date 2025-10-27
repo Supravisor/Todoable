@@ -160,6 +160,10 @@ let incrementor = 0;
       for (let i = 0; i < days.length; i++) {
         let weeklyDate = new Date(diff + weeklyIncrementor)
         weekDay[i].innerHTML = `<h2>${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
+        if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" }) === new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
+          weekDay[i].innerHTML += tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })].map(el => `<li>${el}</li>`).join("");
+        }
+
         weeklyIncrementor += 1000*24*60*60;
       }
 
