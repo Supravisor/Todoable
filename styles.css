@@ -136,11 +136,23 @@ label {
 
 /* Weekly */
 
-.day li {
- padding-top: 1em;
+#weekly h2 {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 6px;
+  margin: 5px;
 }
 
-@media (min-width: 1000px) {
+.day ul {
+  margin-left: -2em;
+}
+
+.day li {
+  font-size: 1.5rem;
+  padding-top: 1em;
+}
+
+@media (min-width: 1200px) {
 
   .weekly {
     display: flex;

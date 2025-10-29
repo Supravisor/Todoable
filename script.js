@@ -52,8 +52,6 @@ const dailyInput = document.getElementById("daily-input");
 const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
-const monday = document.getElementById("Monday");
-const tuesday = document.getElementById("Tuesday");
 
 // monthly
 const thisDate = new Date();
@@ -98,22 +96,22 @@ let incrementor = 0;
       // recurring
       title.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
       taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
-       <input type="checkbox" />
-     <li>
-       <label>
-         ${el}
-       </label>
-     </li>`).join("");
+      <input type="checkbox" />
+      <li>
+        <label>
+          ${el}
+        </label>
+      </li>`).join("");
 
        // ad hoc
        adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
        adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
        <input type="checkbox" />
-     <li>
-       <label>
-         ${el}
-       </label>
-     </li>`).join("");
+       <li>
+         <label>
+           ${el}
+         </label>
+       </li>`).join("");
 
     }
 
@@ -132,7 +130,7 @@ let incrementor = 0;
         return;
       }
 
-      let weeklyIncrementor = 0;
+      let weeklyIncrementor = 1000*24*60*60;
 
       weekly.classList.toggle("hidden");
 
@@ -165,14 +163,12 @@ let incrementor = 0;
         let weeklyDate = new Date(diff + weeklyIncrementor)
         weekDay[i].innerHTML = `<h2>${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
         if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" }) === new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
-          weekDay[i].innerHTML += tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })].map(el => `<li>${el}</li>`).join("");
+          weekDay[i].innerHTML += `<ul>${tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
 
         weeklyIncrementor += 1000*24*60*60;
       }
 
-      monday.innerHTML = tasks[event.target.innerText]["Monday"].map(el => `<li>${el}</li>`).join("");
-      tuesday.innerHTML = tasks[event.target.innerText]["Tuesday"].map(el => `<li>${el}</li>`).join("");
     }
 
     // monthly
@@ -253,12 +249,12 @@ let incrementor = 0;
         // ad hoc
         adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[1]}</h2>`;
         adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-       <input type="checkbox" />
-     <li>
-       <label>
-         ${el}
-       </label>
-     </li>`).join("");
+        <input type="checkbox" />
+        <li>
+          <label>
+           ${el}
+          </label>
+        </li>`).join("");
 
         addDaily.classList.toggle("hidden");
         insertDailyTask.classList.toggle("hidden");
@@ -299,12 +295,12 @@ let incrementor = 0;
     modifyAdHoc = "";
 
     editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-       <li>
-         <label id="edit">
-           ${el}
-         </label>
-       </li>`).join("");
+    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+    <li>
+      <label id="edit">
+        ${el}
+      </label>
+    </li>`).join("");
 
     edit.classList.toggle("hidden");
 
@@ -318,9 +314,7 @@ let incrementor = 0;
     }
 
     dailyModify.value = modifyAdHoc;
-
     edit.classList.toggle("hidden");
-
     updateDailyTask.classList.toggle("hidden");
 
   });
@@ -341,22 +335,22 @@ let incrementor = 0;
     // recurring
     title.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[0]}</h2>`;
     taskList.innerHTML = tasks["Daily"]["Recurring"].map(el => `
-     <input type="checkbox" />
-       <li>
-         <label>
-           ${el}
-         </label>
-       </li>`).join("");
+    <input type="checkbox" />
+      <li>
+        <label>
+          ${el}
+        </label>
+      </li>`).join("");
 
      // ad hoc
      adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[1]}</h2>`;
      adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
      <input type="checkbox" />
-       <li>
-         <label>
-           ${el}
-         </label>
-       </li>`).join("");
+     <li>
+       <label>
+         ${el}
+       </label>
+      </li>`).join("");
 
   });
 
@@ -373,12 +367,12 @@ let incrementor = 0;
     }
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-     <li>
-       <label id="edit">
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <li>
+        <label id="edit">
          ${el}
-       </label>
-     </li>`).join("");
+        </label>
+      </li>`).join("");
 
     edit.classList.toggle("hidden");
 
@@ -391,11 +385,11 @@ let incrementor = 0;
 
     editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-       <li>
-         <label id="edit">
-           ${el}
-         </label>
-       </li>`).join("");
+     <li>
+       <label id="edit">
+         ${el}
+       </label>
+     </li>`).join("");
 
     modifyAdHoc = "";
 
@@ -421,11 +415,11 @@ let incrementor = 0;
     }
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-     <li>
-       <label id="edit">
-         ${el}
-       </label>
-     </li>`).join("");
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <li>
+        <label id="edit">
+          ${el}
+        </label>
+      </li>`).join("");
 
   });
