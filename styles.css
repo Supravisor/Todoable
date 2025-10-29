@@ -138,6 +138,7 @@ label {
 
 #weekly h2 {
   text-align: center;
+  border: 2px solid black;
 }
 
 .day li {
