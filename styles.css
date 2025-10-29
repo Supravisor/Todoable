@@ -148,7 +148,8 @@ label {
 }
 
 .day li {
- padding-top: 1em;
+  font-size: 1.5rem;
+  padding-top: 1em;
 }
 
 @media (min-width: 1000px) {
