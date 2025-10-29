@@ -165,7 +165,7 @@ let incrementor = 0;
         let weeklyDate = new Date(diff + weeklyIncrementor)
         weekDay[i].innerHTML = `<h2>${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
         if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" }) === new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
-          weekDay[i].innerHTML += tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })].map(el => `<li>${el}</li>`).join("");
+          weekDay[i].innerHTML += `<ul>${tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
 
         weeklyIncrementor += 1000*24*60*60;
