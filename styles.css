@@ -152,7 +152,7 @@ label {
   padding-top: 1em;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 
   .weekly {
     display: flex;
