@@ -132,7 +132,7 @@ let incrementor = 0;
         return;
       }
 
-      let weeklyIncrementor = 0;
+      let weeklyIncrementor = 1000*24*60*60;
 
       weekly.classList.toggle("hidden");
 
