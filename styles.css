@@ -143,6 +143,10 @@ label {
   margin: 5px;
 }
 
+.day ul {
+  margin-left: -2em;
+}
+
 .day li {
  padding-top: 1em;
 }
