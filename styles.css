@@ -162,6 +162,14 @@ label {
 
 @media (min-width: 1200px) {
 
+  .short {
+    display: block;
+  }
+
+  .long {
+    display: none;
+  }
+
   .weekly {
     display: flex;
   }
