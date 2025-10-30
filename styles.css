@@ -166,6 +166,10 @@ label {
     display: block;
   }
 
+  .long {
+    display: none;
+  }
+
   .weekly {
     display: flex;
   }
