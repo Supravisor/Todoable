@@ -143,16 +143,16 @@ label {
   margin: 5px;
 }
 
+.day ul {
+  margin-left: -2em;
+}
+
 @media (min-width: 0px) {
 
   .short {
     display: none;
   }
 
-}
-
-.day ul {
-  margin-left: -2em;
 }
 
 .day li {
