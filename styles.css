@@ -155,7 +155,7 @@ label {
 @media (min-width: 0px) {
 
   .short {
-    display: none;
+    display: block;
   }
 
 }
