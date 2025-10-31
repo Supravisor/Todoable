@@ -136,6 +136,10 @@ label {
 
 /* Weekly */
 
+#weekly h2 {
+  text-align: center;
+}
+
 @media (min-width: 0px) {
 
   .short {
