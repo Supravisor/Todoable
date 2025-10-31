@@ -139,6 +139,7 @@ label {
 #weekly h2 {
   text-align: center;
   border: 2px solid black;
+  border-radius: 6px;
 }
 
 @media (min-width: 0px) {
@@ -147,11 +148,6 @@ label {
     display: none;
   }
 
-}
-
-#weekly h2 {
-  border-radius: 6px;
-  margin: 5px;
 }
 
 .day ul {
