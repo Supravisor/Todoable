@@ -171,6 +171,10 @@ label {
 
 @media (min-width: 300px) {
 
+  .short {
+    display: none;
+  }
+
 }
 
 @media (min-width: 1200px) {
