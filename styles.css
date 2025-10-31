@@ -158,6 +158,10 @@ label {
     display: block;
   }
 
+  .long {
+    display: none;
+  }
+
 }
 
 .day li {
