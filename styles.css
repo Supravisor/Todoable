@@ -138,6 +138,7 @@ label {
 
 #weekly h2 {
   text-align: center;
+  border: 2px solid black;
 }
 
 @media (min-width: 0px) {
@@ -149,8 +150,6 @@ label {
 }
 
 #weekly h2 {
-  text-align: center;
-  border: 2px solid black;
   border-radius: 6px;
   margin: 5px;
 }
