@@ -136,14 +136,6 @@ label {
 
 /* Weekly */
 
-@media (min-width: 0px) {
-
-  .short {
-    display: none;
-  }
-
-}
-
 #weekly h2 {
   text-align: center;
   border: 2px solid black;
@@ -158,6 +150,35 @@ label {
 .day li {
   font-size: 1.5rem;
   padding-top: 1em;
+}
+
+@media (min-width: 0px) {
+
+  .short {
+    display: block;
+  }
+
+  .long {
+    display: none;
+  }
+
+}
+
+.day li {
+  font-size: 1.5rem;
+  padding-top: 1em;
+}
+
+@media (min-width: 300px) {
+
+  .short {
+    display: none;
+  }
+
+  .long {
+    display: block;
+  }
+
 }
 
 @media (min-width: 1200px) {
