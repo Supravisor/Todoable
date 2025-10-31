@@ -175,6 +175,10 @@ label {
     display: none;
   }
 
+  .long {
+    display: block;
+  }
+
 }
 
 @media (min-width: 1200px) {
