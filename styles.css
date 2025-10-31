@@ -147,6 +147,10 @@ label {
   margin-left: -2em;
 }
 
+.day li {
+  font-size: 1.5rem;
+}
+
 @media (min-width: 0px) {
 
   .short {
