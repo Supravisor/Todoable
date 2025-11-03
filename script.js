@@ -91,6 +91,10 @@ let incrementor = 0;
         addWeekly.classList.add("hidden");
       }
 
+      if (editWeekly.classList !== "hidden") {
+        editWeekly.classList.add("hidden");
+      }
+
       if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
       }
@@ -113,11 +117,11 @@ let incrementor = 0;
        adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
        adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
        <input type="checkbox" />
-       <li>
-         <label>
-           ${el}
-         </label>
-       </li>`).join("");
+         <li>
+           <label>
+             ${el}
+           </label>
+         </li>`).join("");
 
     }
 
