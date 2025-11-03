@@ -52,8 +52,7 @@ const dailyInput = document.getElementById("daily-input");
 const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
-const addWeekly = document.getElementById("add-weekly");
-const editWeekly = document.getElementById("edit-weekly");
+const modifyWeekly = document.getElementById("modify-weekly");
 
 // monthly
 const thisDate = new Date();
@@ -87,12 +86,8 @@ let incrementor = 0;
       adHocTitle.classList.toggle("hidden");
       adHocList.classList.toggle("hidden");
 
-      if (addWeekly.classList !== "hidden") {
-        addWeekly.classList.add("hidden");
-      }
-
-      if (editWeekly.classList !== "hidden") {
-        editWeekly.classList.add("hidden");
+      if (modifyWeekly.classList !== "hidden") {
+        modifyWeekly.classList.add("hidden");
       }
 
       if (weekly.classList[1] !== "hidden") {
@@ -128,8 +123,7 @@ let incrementor = 0;
     // weekly
     if (event.target.innerText === "Weekly") {
 
-      addWeekly.classList.toggle("hidden");
-      editWeekly.classList.toggle("hidden");
+      modifyWeekly.classList.toggle("hidden");
 
       if (insertDailyTask.classList.length !== 1) {
         return;
@@ -176,8 +170,8 @@ let incrementor = 0;
 
         let weeklyDate = new Date(diff + weeklyIncrementor);
 
-        weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
-        weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
+          weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
+          weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
 
         if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
           weekDay[i].innerHTML += `<ul>${tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
@@ -207,12 +201,8 @@ let incrementor = 0;
         return;
       }
 
-      if (addWeekly.classList !== "hidden") {
-        addWeekly.classList.add("hidden");
-      }
-
-      if (editWeekly.classList !== "hidden") {
-        editWeekly.classList.add("hidden");
+      if (modifyWeekly.classList !== "hidden") {
+        modifyWeekly.classList.add("hidden");
       }
 
       month.classList.toggle("hidden");
