@@ -211,6 +211,10 @@ let incrementor = 0;
         addWeekly.classList.add("hidden");
       }
 
+      if (editWeekly.classList !== "hidden") {
+        editWeekly.classList.add("hidden");
+      }
+
       month.classList.toggle("hidden");
 
       if (insertDailyTask.classList !== "hidden") {
