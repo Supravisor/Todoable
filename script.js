@@ -53,6 +53,7 @@ const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
 const addWeekly = document.getElementById("add-weekly");
+const editWeekly = document.getElementById("edit-weekly");
 
 // monthly
 const thisDate = new Date();
