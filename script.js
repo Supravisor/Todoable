@@ -52,6 +52,8 @@ const dailyInput = document.getElementById("daily-input");
 const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
+const addWeekly = document.getElementById("add-weekly");
+const editWeekly = document.getElementById("edit-weekly");
 
 // monthly
 const thisDate = new Date();
@@ -85,6 +87,14 @@ let incrementor = 0;
       adHocTitle.classList.toggle("hidden");
       adHocList.classList.toggle("hidden");
 
+      if (addWeekly.classList !== "hidden") {
+        addWeekly.classList.add("hidden");
+      }
+
+      if (editWeekly.classList !== "hidden") {
+        editWeekly.classList.add("hidden");
+      }
+
       if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
       }
@@ -107,16 +117,19 @@ let incrementor = 0;
        adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
        adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
        <input type="checkbox" />
-       <li>
-         <label>
-           ${el}
-         </label>
-       </li>`).join("");
+         <li>
+           <label>
+             ${el}
+           </label>
+         </li>`).join("");
 
     }
 
     // weekly
     if (event.target.innerText === "Weekly") {
+
+      addWeekly.classList.toggle("hidden");
+      editWeekly.classList.toggle("hidden");
 
       if (insertDailyTask.classList.length !== 1) {
         return;
@@ -192,6 +205,14 @@ let incrementor = 0;
 
       if (updateDailyTask.classList.length !== 1) {
         return;
+      }
+
+      if (addWeekly.classList !== "hidden") {
+        addWeekly.classList.add("hidden");
+      }
+
+      if (editWeekly.classList !== "hidden") {
+        editWeekly.classList.add("hidden");
       }
 
       month.classList.toggle("hidden");
