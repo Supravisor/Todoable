@@ -170,8 +170,8 @@ let incrementor = 0;
 
         let weeklyDate = new Date(diff + weeklyIncrementor);
 
-        weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
-        weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
+          weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
+          weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
 
         if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
           weekDay[i].innerHTML += `<ul>${tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
@@ -201,12 +201,8 @@ let incrementor = 0;
         return;
       }
 
-      if (addWeekly.classList !== "hidden") {
-        addWeekly.classList.add("hidden");
-      }
-
-      if (editWeekly.classList !== "hidden") {
-        editWeekly.classList.add("hidden");
+      if (modifyWeekly.classList !== "hidden") {
+        modifyWeekly.classList.add("hidden");
       }
 
       month.classList.toggle("hidden");
