@@ -87,6 +87,10 @@ let incrementor = 0;
       adHocTitle.classList.toggle("hidden");
       adHocList.classList.toggle("hidden");
 
+      if (addWeekly.classList !== "hidden") {
+        addWeekly.classList.add("hidden");
+      }
+
       if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
       }
