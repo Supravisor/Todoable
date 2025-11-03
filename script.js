@@ -128,6 +128,8 @@ let incrementor = 0;
     // weekly
     if (event.target.innerText === "Weekly") {
 
+      addWeekly.classList.toggle("hidden");
+
       if (insertDailyTask.classList.length !== 1) {
         return;
       }
