@@ -52,8 +52,7 @@ const dailyInput = document.getElementById("daily-input");
 const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
-const addWeekly = document.getElementById("add-weekly");
-const editWeekly = document.getElementById("edit-weekly");
+const modifyWeekly = document.getElementById("modify-weekly");
 
 // monthly
 const thisDate = new Date();
