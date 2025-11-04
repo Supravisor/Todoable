@@ -108,7 +108,7 @@ h3 {
   font-size: 1.6em;
 }
 
-#task-list li, #ad-hoc-list li, #edit-daily-task li {
+#task-list li, #ad-hoc-list li, #edit-daily-task li, #edit-weekly-task li {
   font-size: 1.5rem;
   padding-bottom: 1em;
   margin-top: -40px;
