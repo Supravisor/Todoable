@@ -53,6 +53,7 @@ const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
 const modifyWeekly = document.getElementById("modify-weekly");
+const editWeeklyTask = document.getElementById("edit-weekly-task");
 
 // monthly
 const thisDate = new Date();
@@ -439,3 +440,13 @@ let incrementor = 0;
       </li>`).join("");
 
   });
+
+// weekly selection list
+
+    editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+       <li>
+         <label>
+           ${el}
+         </label>
+       </li>`).join("");
