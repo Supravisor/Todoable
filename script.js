@@ -113,11 +113,11 @@ let incrementor = 0;
        adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
        adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
        <input type="checkbox" />
-         <li>
-           <label>
-             ${el}
-           </label>
-         </li>`).join("");
+       <li>
+         <label>
+           ${el}
+         </label>
+       </li>`).join("");
 
     }
 
@@ -174,7 +174,7 @@ let incrementor = 0;
           weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
           weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
 
-        if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
+        if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })) {
           weekDay[i].innerHTML += `<ul>${tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
 
@@ -367,7 +367,7 @@ let incrementor = 0;
        <label>
          ${el}
        </label>
-      </li>`).join("");
+     </li>`).join("");
 
   });
 
@@ -445,8 +445,8 @@ let incrementor = 0;
 
     editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-       <li>
-         <label>
-           ${el}
-         </label>
-       </li>`).join("");
+     <li>
+       <label>
+         ${el}
+       </label>
+     </li>`).join("");
