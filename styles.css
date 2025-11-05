@@ -80,7 +80,7 @@ h3 {
   justify-content: space-around;
 }
 
-#insert-daily, #update-daily, #modify-daily, #delete-daily {
+#insert-daily, #update-daily, #modify-daily, #delete-daily, #insert-weekly, #update-weekly, #delete-weekly {
   margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
@@ -108,14 +108,14 @@ h3 {
   font-size: 1.6em;
 }
 
-#task-list li, #ad-hoc-list li, #edit-daily-task li {
+#task-list li, #ad-hoc-list li, #edit-daily-task li, #edit-weekly-task li {
   font-size: 1.5rem;
   padding-bottom: 1em;
   margin-top: -40px;
   margin-left: 2.5em;
 }
 
-#edit-daily-task, #delete-daily-task {
+#edit-daily-task, #delete-daily-task, #edit-weekly-task {
   margin-left: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
