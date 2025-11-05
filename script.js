@@ -175,7 +175,7 @@ let incrementor = 0;
           weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
 
         if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })) {
-          weekDay[i].innerHTML += `<ul>${tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
+          weekDay[i].innerHTML += `<ul>${tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
 
         weeklyIncrementor += 1000*24*60*60;
