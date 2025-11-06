@@ -462,4 +462,8 @@ let incrementor = 0;
     // insert weekly
     insertWeekly.addEventListener("click", event => {
 
+      if (weeklyInput.value === "") {
+        return;
+      }
+
     });
