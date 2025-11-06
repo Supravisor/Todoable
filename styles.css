@@ -88,7 +88,6 @@ h3 {
 
 input[type="text"] {
   padding-left: 0.5em;
-  font-size: 1.5em;
 }
 
 .heading2 {
@@ -100,19 +99,10 @@ h2, h3 {
   font-family: Tahoma;
 }
 
-h2 {
-  font-size: 1.7em;
-}
-
-h3 {
-  font-size: 1.6em;
-}
-
 #task-list li, #ad-hoc-list li, #edit-daily-task li, #edit-weekly-task li {
-  font-size: 1.5rem;
   padding-bottom: 1em;
-  margin-top: -40px;
-  margin-left: 2.5em;
+  margin-top: -2.2em;
+  margin-left: 4em;
 }
 
 #edit-daily-task, #delete-daily-task, #edit-weekly-task {
@@ -152,7 +142,6 @@ label {
 }
 
 .day li {
-  font-size: 1.5rem;
   padding-top: 1em;
 }
 
@@ -166,11 +155,6 @@ label {
     display: none;
   }
 
-}
-
-.day li {
-  font-size: 1.5rem;
-  padding-top: 1em;
 }
 
 @media (min-width: 300px) {
