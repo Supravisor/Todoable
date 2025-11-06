@@ -6,11 +6,11 @@ let tasks = {
   },
   "Weekly": {
     "Monday": ["Progress updates"],
-    "Tuesday": ["taco lunch", "staff meeting"],
+    "Tuesday": ["tacos", "staff meeting"],
     "Wednesday": ["client lunch"],
     "Thursday": ["Thursday", "Stuff"],
     "Friday": ["Progress updates"],
-    "Saturday": ["Nature walk"],
+    "Saturday": [""],
     "Sunday": [""]
    },
   "Monthly": ["Status reports"]
@@ -54,6 +54,7 @@ const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
 const modifyWeekly = document.getElementById("modify-weekly");
 const editWeeklyTask = document.getElementById("edit-weekly-task");
+const addWeekly = document.getElementById("add-weekly");
 
 // monthly
 const thisDate = new Date();
