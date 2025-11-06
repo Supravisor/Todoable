@@ -458,3 +458,8 @@ let incrementor = 0;
     addWeekly.addEventListener("click", event => {
 
     });
+
+    // insert weekly
+    insertWeekly.addEventListener("click", event => {
+
+    });
