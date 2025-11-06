@@ -6,11 +6,11 @@ let tasks = {
   },
   "Weekly": {
     "Monday": ["Progress updates"],
-    "Tuesday": ["taco lunch", "staff meeting"],
+    "Tuesday": ["tacos", "staff meeting"],
     "Wednesday": ["client lunch"],
     "Thursday": ["Thursday", "Stuff"],
     "Friday": ["Progress updates"],
-    "Saturday": ["Nature walk"],
+    "Saturday": [""],
     "Sunday": [""]
    },
   "Monthly": ["Status reports"]
@@ -54,6 +54,9 @@ const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
 const modifyWeekly = document.getElementById("modify-weekly");
 const editWeeklyTask = document.getElementById("edit-weekly-task");
+const addWeekly = document.getElementById("add-weekly");
+const insertWeekly = document.getElementById("insert-weekly");
+const weeklyInput = document.getElementById("weekly-input");
 
 // monthly
 const thisDate = new Date();
@@ -441,7 +444,7 @@ let incrementor = 0;
 
   });
 
-// weekly selection list
+    // weekly selection list
 
     editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
@@ -450,3 +453,19 @@ let incrementor = 0;
          ${el}
        </label>
      </li>`).join("");
+
+    // add weekly
+    addWeekly.addEventListener("click", event => {
+
+    });
+
+    // insert weekly
+    insertWeekly.addEventListener("click", event => {
+
+      if (weeklyInput.value === "") {
+        return;
+      } else {
+
+      }
+
+    });
