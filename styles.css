@@ -80,7 +80,7 @@ h3 {
   justify-content: space-around;
 }
 
-#insert-daily, #update-daily, #modify-daily, #delete-daily, #insert-weekly, #update-weekly, #delete-weekly {
+#insert-daily, #update-daily, #modify-daily, #delete-daily, #add-weekly, #edit-weekly {
   margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
