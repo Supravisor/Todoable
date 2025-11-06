@@ -464,6 +464,8 @@ let incrementor = 0;
 
       if (weeklyInput.value === "") {
         return;
+      } else {
+
       }
 
     });
