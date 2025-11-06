@@ -100,7 +100,6 @@ h2, h3 {
 }
 
 #task-list li, #ad-hoc-list li, #edit-daily-task li, #edit-weekly-task li {
-  font-size: 1.5rem;
   padding-bottom: 1em;
   margin-top: -40px;
   margin-left: 2.5em;
