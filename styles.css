@@ -102,7 +102,7 @@ h2, h3 {
 #task-list li, #ad-hoc-list li, #edit-daily-task li, #edit-weekly-task li {
   padding-bottom: 1em;
   margin-top: -2.2em;
-  margin-left: 2.5em;
+  margin-left: 4em;
 }
 
 #edit-daily-task, #delete-daily-task, #edit-weekly-task {
