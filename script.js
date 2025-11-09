@@ -472,6 +472,8 @@ let incrementor = 0;
           let weeklyIncrementor = 1000*24*60*60;
 
           for (let i = 0; i < days.length; i++) {
+
+            let weeklyDate = new Date(diff + weeklyIncrementor);
         
           }
 
