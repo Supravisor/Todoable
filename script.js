@@ -466,6 +466,7 @@ let incrementor = 0;
         return;
       } else {
         tasks["Weekly"][modifyAdHoc].push(weeklyInput.value);
+        dailyInput.value = "";
       }
 
     });
