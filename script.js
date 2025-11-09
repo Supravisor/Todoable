@@ -465,11 +465,15 @@ let incrementor = 0;
       if (weeklyInput.value === "") {
         return;
       } else {
-        tasks["Weekly"][modifyAdHoc].push(weeklyInput.value);
-        dailyInput.value = "";
+          tasks["Weekly"][modifyAdHoc].push(weeklyInput.value);
+          dailyInput.value = "";
 
-      // weekly task list
-      let weeklyIncrementor = 1000*24*60*60;
+          // weekly task list
+          let weeklyIncrementor = 1000*24*60*60;
+
+          for (let i = 0; i < days.length; i++) {
+        
+          }
 
       }
 
