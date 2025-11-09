@@ -467,6 +467,10 @@ let incrementor = 0;
       } else {
         tasks["Weekly"][modifyAdHoc].push(weeklyInput.value);
         dailyInput.value = "";
+
+      // weekly task list
+      let weeklyIncrementor = 1000*24*60*60;
+
       }
 
     });
