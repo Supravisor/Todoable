@@ -155,6 +155,10 @@ let incrementor = 0;
         selectWeeklyTask.classList.add("hidden");
       }
 
+      if (insertWeeklyTask.classList !== "hidden") {
+        insertWeeklyTask.classList.add("hidden");
+      }
+
       let weeklyIncrementor = 1000*24*60*60;
 
       weekly.classList.toggle("hidden");
