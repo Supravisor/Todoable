@@ -497,6 +497,9 @@ let incrementor = 0;
         return;
       }
 
+      selectWeeklyTask.classList.toggle("hidden");
+      insertWeeklyTask.classList.toggle("hidden");
+
     });
 
   // insert weekly
