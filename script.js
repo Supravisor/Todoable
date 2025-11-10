@@ -482,6 +482,8 @@ let incrementor = 0;
               weekDay[i].innerHTML += `<ul>${tasks["Weekly"][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
             }
 
+            weeklyIncrementor += 1000*24*60*60;
+
           }
 
       }
