@@ -195,7 +195,7 @@ let incrementor = 0;
           weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
           weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
 
-        if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })) {
+        if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
           weekDay[i].innerHTML += `<ul>${tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
 
@@ -492,6 +492,10 @@ let incrementor = 0;
 
     // add weekly
     addWeekly.addEventListener("click", event => {
+
+      if (!modifyAdHoc) {
+        return;
+      }
 
     });
 
