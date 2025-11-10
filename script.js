@@ -5,13 +5,13 @@ let tasks = {
     "Ad hoc": ["plan report", "design brief"]
   },
   "Weekly": {
-    "Monday": ["Progress updates"],
-    "Tuesday": ["tacos", "staff meeting"],
-    "Wednesday": ["client lunch"],
-    "Thursday": ["Thursday", "Stuff"],
-    "Friday": ["Progress updates"],
-    "Saturday": [""],
-    "Sunday": [""]
+    "Monday": ["Mexican Monday"],
+    "Tuesday": ["Taco Tuesday", "staff meeting"],
+    "Wednesday": ["Wild buritto"],
+    "Thursday": ["Tamales Thursday"],
+    "Friday": ["Fiesta Friday"],
+    "Saturday": ["Salsa Saturday"],
+    "Sunday": ["Sunday siesta"]
    },
   "Monthly": ["Status reports"]
 }
@@ -465,6 +465,37 @@ let incrementor = 0;
       if (weeklyInput.value === "") {
         return;
       } else {
+          tasks["Weekly"][modifyAdHoc].push(weeklyInput.value);
+          dailyInput.value = "";
+
+          // weekly task list
+          let weeklyIncrementor = 1000*24*60*60;
+
+          for (let i = 0; i < days.length; i++) {
+
+            let weeklyDate = new Date(diff + weeklyIncrementor);
+
+              weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
+              weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
+
+            if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
+              weekDay[i].innerHTML += `<ul>${tasks["Weekly"][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
+            }
+
+            weeklyIncrementor += 1000*24*60*60;
+
+          }
+
+          weeklyInput.value = "";
+          modifyAdHoc = "";
+
+          editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+           <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+             <li>
+               <label>
+                 ${el}
+               </label>
+             </li>`).join("");
 
       }
 
