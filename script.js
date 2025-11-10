@@ -53,6 +53,7 @@ const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
 const modifyWeekly = document.getElementById("modify-weekly");
+const addWeekly = document.getElementById("add-weekly");
 const editWeeklyTask = document.getElementById("edit-weekly-task");
 const addWeekly = document.getElementById("add-weekly");
 const insertWeekly = document.getElementById("insert-weekly");
