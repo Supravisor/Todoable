@@ -447,6 +447,11 @@ let incrementor = 0;
 
   });
 
+  // modify weekly
+  modifyWeekly.addEventListener("click", event => {
+
+  });
+
     // weekly selection list
 
     editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
