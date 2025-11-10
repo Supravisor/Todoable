@@ -55,6 +55,7 @@ const weekDay = document.querySelectorAll(".day");
 const modifyWeekly = document.getElementById("modify-weekly");
 const addWeekly = document.getElementById("add-weekly");
 const editWeeklyTask = document.getElementById("edit-weekly-task");
+const selectWeeklyTask = document.getElementById("select-weekly-task");
 const addWeekly = document.getElementById("add-weekly");
 const insertWeekly = document.getElementById("insert-weekly");
 const weeklyInput = document.getElementById("weekly-input");
