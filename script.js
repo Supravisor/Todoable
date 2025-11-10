@@ -486,6 +486,9 @@ let incrementor = 0;
 
           }
 
+          weeklyInput.value = "";
+          modifyAdHoc = "";
+    
       }
 
     });
