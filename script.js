@@ -496,7 +496,6 @@ let incrementor = 0;
                  ${el}
                </label>
              </li>`).join("");
-          }
 
       }
 
