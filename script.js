@@ -53,10 +53,13 @@ const days = document.querySelectorAll("h2");
 const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
 const modifyWeekly = document.getElementById("modify-weekly");
-const editWeeklyTask = document.getElementById("edit-weekly-task");
 const addWeekly = document.getElementById("add-weekly");
+const editWeeklyTask = document.getElementById("edit-weekly-task");
+const selectWeeklyTask = document.getElementById("select-weekly-task");
 const insertWeekly = document.getElementById("insert-weekly");
 const weeklyInput = document.getElementById("weekly-input");
+const closeWeekly = document.getElementById("close-weekly");
+const insertWeeklyTask = document.getElementById("insert-weekly-task");
 
 // monthly
 const thisDate = new Date();
@@ -92,6 +95,14 @@ let incrementor = 0;
 
       if (modifyWeekly.classList !== "hidden") {
         modifyWeekly.classList.add("hidden");
+      }
+
+      if (selectWeeklyTask.classList !== "hidden") {
+        selectWeeklyTask.classList.add("hidden");
+      }
+
+      if (insertWeeklyTask.classList !== "hidden") {
+        insertWeeklyTask.classList.add("hidden");
       }
 
       if (weekly.classList[1] !== "hidden") {
@@ -141,6 +152,14 @@ let incrementor = 0;
         return;
       }
 
+      if (selectWeeklyTask.classList !== "hidden") {
+        selectWeeklyTask.classList.add("hidden");
+      }
+
+      if (insertWeeklyTask.classList !== "hidden") {
+        insertWeeklyTask.classList.add("hidden");
+      }
+
       let weeklyIncrementor = 1000*24*60*60;
 
       weekly.classList.toggle("hidden");
@@ -177,7 +196,7 @@ let incrementor = 0;
           weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
           weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
 
-        if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })) {
+        if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
           weekDay[i].innerHTML += `<ul>${tasks[event.target.innerText][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
 
@@ -444,59 +463,84 @@ let incrementor = 0;
 
   });
 
-    // weekly selection list
+  // modify weekly
+  modifyWeekly.addEventListener("click", event => {
 
-    editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-     <li>
-       <label>
-         ${el}
-       </label>
-     </li>`).join("");
+    modifyWeekly.classList.toggle("hidden");
+    selectWeeklyTask.classList.toggle("hidden");
+    weekly.classList.toggle("hidden");
+
+  });
+
+  // close weekly
+  closeWeekly.addEventListener("click", event => {
+
+    modifyWeekly.classList.toggle("hidden");
+    selectWeeklyTask.classList.toggle("hidden");
+    weekly.classList.toggle("hidden");
+
+  });
+
+  // weekly selection list
+
+  editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+    <li>
+      <label>
+        ${el}
+        </label>
+      </li>`).join("");
 
     // add weekly
     addWeekly.addEventListener("click", event => {
 
-    });
-
-    // insert weekly
-    insertWeekly.addEventListener("click", event => {
-
-      if (weeklyInput.value === "") {
+      if (!modifyAdHoc) {
         return;
-      } else {
-          tasks["Weekly"][modifyAdHoc].push(weeklyInput.value);
-          dailyInput.value = "";
-
-          // weekly task list
-          let weeklyIncrementor = 1000*24*60*60;
-
-          for (let i = 0; i < days.length; i++) {
-
-            let weeklyDate = new Date(diff + weeklyIncrementor);
-
-              weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
-              weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
-
-            if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
-              weekDay[i].innerHTML += `<ul>${tasks["Weekly"][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
-            }
-
-            weeklyIncrementor += 1000*24*60*60;
-
-          }
-
-          weeklyInput.value = "";
-          modifyAdHoc = "";
-
-          editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-           <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-             <li>
-               <label>
-                 ${el}
-               </label>
-             </li>`).join("");
-
       }
 
+      selectWeeklyTask.classList.toggle("hidden");
+      insertWeeklyTask.classList.toggle("hidden");
+
     });
+
+  // insert weekly
+  insertWeekly.addEventListener("click", event => {
+
+    if (weeklyInput.value === "") {
+      return;
+    } else {
+        tasks["Weekly"][modifyAdHoc].push(weeklyInput.value);
+        dailyInput.value = "";
+
+        // weekly task list
+        let weeklyIncrementor = 1000*24*60*60;
+
+        for (let i = 0; i < days.length; i++) {
+
+          let weeklyDate = new Date(diff + weeklyIncrementor);
+
+            weekDay[i].innerHTML = `<h2 class="short">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })} ${weeklyDate.getDate()}</h2>`;
+            weekDay[i].innerHTML += `<h2 class="long">${new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })} ${weeklyDate.getDate()}</h2>`;
+
+          if (new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "short" })) {
+            weekDay[i].innerHTML += `<ul>${tasks["Weekly"][new Date(weeklyDate + weeklyIncrementor).toLocaleString("default", { weekday: "long" })].map(el => `<li>${el}</li>`).join("")}</ul>`;
+          }
+
+          weeklyIncrementor += 1000*24*60*60;
+
+        }
+
+        weeklyInput.value = "";
+        modifyAdHoc = "";
+
+        editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+         <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+           <li>
+             <label>
+               ${el}
+             </label>
+           </li>`).join("");
+
+    }
+
+  });
