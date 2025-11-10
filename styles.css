@@ -81,7 +81,7 @@ h3 {
   justify-content: space-around;
 }
 
-#insert-daily, #update-daily, #modify-daily, #delete-daily, #add-weekly, #edit-weekly, #insert-weekly  {
+#insert-daily, #update-daily, #modify-daily, #delete-daily, #add-weekly, #edit-weekly, #insert-weekly {
   margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
@@ -93,7 +93,7 @@ input[type="text"] {
 
 .heading2 {
   padding-top: 2em;
-  margin-left: 1.8em;
+  margin-left: 1.4em;
 }
 
 h2, h3 {
