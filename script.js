@@ -59,6 +59,7 @@ const selectWeeklyTask = document.getElementById("select-weekly-task");
 const insertWeekly = document.getElementById("insert-weekly");
 const weeklyInput = document.getElementById("weekly-input");
 const closeWeekly = document.getElementById("close-weekly");
+const insertWeeklyTask = document.getElementById("insert-weekly-task");
 
 // monthly
 const thisDate = new Date();
