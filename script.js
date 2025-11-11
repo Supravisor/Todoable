@@ -545,3 +545,9 @@ let incrementor = 0;
     }
 
   });
+
+
+  // close add weekly
+  closeAddWeekly.addEventListener("click", event => {
+
+  });
