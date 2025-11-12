@@ -70,7 +70,7 @@ h3 {
   border-radius: 6px;
 }
 
-#insert-daily-task, #edit, #update-daily-task, #select-weekly-task, #insert-weekly-task {
+#insert-daily-task, #edit, #update-daily-task, #select-weekly-task, #insert-weekly-task, #edit-weekly-task  {
   margin: auto;
   min-width: 300px;
   max-width: 500px;
@@ -81,7 +81,7 @@ h3 {
   justify-content: space-around;
 }
 
-#insert-daily, #update-daily, #modify-daily, #delete-daily, #add-weekly, #edit-weekly, #insert-weekly {
+#insert-daily, #update-daily, #modify-daily, #delete-daily, #add-weekly, #edit-weekly, #insert-weekly, #update-weekly, #delete-weekly {
   margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
@@ -100,13 +100,13 @@ h2, h3 {
   font-family: Tahoma;
 }
 
-#task-list li, #ad-hoc-list li, #edit-daily-task li, #edit-weekly-task li {
+#task-list li, #ad-hoc-list li, #edit-daily-task li, #select-weekly-task-list li, #edit-weekly-task-list li {
   padding-bottom: 1em;
   margin-top: -2.2em;
   margin-left: 4em;
 }
 
-#edit-daily-task, #delete-daily-task, #edit-weekly-task {
+#edit-daily-task, #delete-daily-task, #select-weekly-task-list, #edit-weekly-task-list {
   margin-left: 15%;
   margin-top: 1em;
   margin-bottom: 1em;
