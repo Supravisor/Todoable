@@ -550,4 +550,14 @@ let incrementor = 0;
   // close add weekly
   closeAddWeekly.addEventListener("click", event => {
 
+    modifyAdHoc = "";
+
+    editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <li>
+        <label>
+          ${el}
+        </label>
+      </li>`).join("");
+
   });
