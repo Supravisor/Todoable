@@ -412,7 +412,7 @@ let incrementor = 0;
       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
       <li>
         <label id="edit">
-         ${el}
+          ${el}
         </label>
       </li>`).join("");
 
@@ -572,3 +572,9 @@ let incrementor = 0;
     modifyWeekly.classList.toggle("hidden");
 
   });
+
+  // edit weekly
+  editWeekly.addEventListener("click", event => {
+
+  });
+
