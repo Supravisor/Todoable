@@ -292,7 +292,7 @@ let incrementor = 0;
         <input type="checkbox" />
         <li>
           <label>
-           ${el}
+            ${el}
           </label>
         </li>`).join("");
 
@@ -541,6 +541,10 @@ let incrementor = 0;
                ${el}
              </label>
            </li>`).join("");
+
+        insertWeeklyTask.classList.toggle("hidden");
+        weekly.classList.toggle("hidden");
+        modifyWeekly.classList.toggle("hidden");
 
     }
 
