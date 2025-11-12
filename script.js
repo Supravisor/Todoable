@@ -60,6 +60,7 @@ const insertWeekly = document.getElementById("insert-weekly");
 const weeklyInput = document.getElementById("weekly-input");
 const closeWeekly = document.getElementById("close-weekly");
 const insertWeeklyTask = document.getElementById("insert-weekly-task");
+const closeAddWeekly = document.getElementById("close-add-weekly");
 
 // monthly
 const thisDate = new Date();
@@ -291,7 +292,7 @@ let incrementor = 0;
         <input type="checkbox" />
         <li>
           <label>
-           ${el}
+            ${el}
           </label>
         </li>`).join("");
 
@@ -541,6 +542,31 @@ let incrementor = 0;
              </label>
            </li>`).join("");
 
+        insertWeeklyTask.classList.toggle("hidden");
+        weekly.classList.toggle("hidden");
+        modifyWeekly.classList.toggle("hidden");
+
     }
+
+  });
+
+
+  // close add weekly
+  closeAddWeekly.addEventListener("click", event => {
+
+    weeklyInput.value = "";
+    modifyAdHoc = "";
+
+    editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <li>
+        <label>
+          ${el}
+        </label>
+      </li>`).join("");
+
+    insertWeeklyTask.classList.toggle("hidden");
+    weekly.classList.toggle("hidden");
+    modifyWeekly.classList.toggle("hidden");
 
   });
