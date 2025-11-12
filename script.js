@@ -560,4 +560,8 @@ let incrementor = 0;
         </label>
       </li>`).join("");
 
+    insertWeeklyTask.classList.toggle("hidden");
+    weekly.classList.toggle("hidden");
+    modifyWeekly.classList.toggle("hidden");
+
   });
