@@ -589,5 +589,13 @@ let incrementor = 0;
          </label>
        </li>`).join("");
 
+    editWeeklyTaskList.innerHTML = tasks["Weekly"][modifyAdHoc].map(el => `
+    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+    <li>
+      <label id="edit">
+        ${el}
+      </label>
+    </li>`).join("");
+
   });
 
