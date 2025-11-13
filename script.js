@@ -647,3 +647,8 @@ let incrementor = 0;
       </li>`).join("");
 
   });
+
+  // update weekly
+  updateWeekly.addEventListener("click", event => {
+
+  });
