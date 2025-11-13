@@ -638,4 +638,12 @@ let incrementor = 0;
     editWeeklyTask.classList.toggle("hidden");
     weekly.classList.toggle("hidden");
 
+    selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <li>
+        <label>
+          ${el}
+        </label>
+      </li>`).join("");
+
   });
