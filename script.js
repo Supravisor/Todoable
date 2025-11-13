@@ -611,6 +611,7 @@ let incrementor = 0;
     </li>`).join("");
 
     selectWeeklyTask.classList.toggle("hidden");
+    editWeeklyTask.classList.toggle("hidden");
 
   });
 
