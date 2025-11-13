@@ -54,7 +54,7 @@ const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
 const modifyWeekly = document.getElementById("modify-weekly");
 const addWeekly = document.getElementById("add-weekly");
-const editWeeklyTask = document.getElementById("select-weekly-task-list");
+const selectWeeklyTaskList = document.getElementById("select-weekly-task-list");
 const selectWeeklyTask = document.getElementById("select-weekly-task");
 const insertWeekly = document.getElementById("insert-weekly");
 const weeklyInput = document.getElementById("weekly-input");
@@ -63,6 +63,7 @@ const insertWeeklyTask = document.getElementById("insert-weekly-task");
 const closeAddWeekly = document.getElementById("close-add-weekly");
 const editWeekly = document.getElementById("edit-weekly");
 const editWeeklyTaskList = document.getElementById("edit-weekly-task-list");
+const editWeeklyTask = document.getElementById("edit-weekly-task");
 
 // monthly
 const thisDate = new Date();
@@ -486,13 +487,13 @@ let incrementor = 0;
 
   // weekly selection list
 
-  editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+  selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
     <li>
       <label>
         ${el}
-        </label>
-      </li>`).join("");
+      </label>
+    </li>`).join("");
 
   // add weekly
   addWeekly.addEventListener("click", event => {
