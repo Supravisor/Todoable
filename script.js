@@ -66,6 +66,7 @@ const editWeeklyTaskList = document.getElementById("edit-weekly-task-list");
 const editWeeklyTask = document.getElementById("edit-weekly-task");
 const closeEditWeekly = document.getElementById("close-edit-weekly");
 const updateWeekly = document.getElementById("update-weekly");
+const deleteWeekly = document.getElementById("delete-weekly");
 
 // monthly
 const thisDate = new Date();
