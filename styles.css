@@ -70,7 +70,7 @@ h3 {
   border-radius: 6px;
 }
 
-#insert-daily-task, #edit, #update-daily-task, #select-weekly-task, #insert-weekly-task, #edit-weekly-task  {
+#insert-daily-task, #edit, #update-daily-task, #select-weekly-task, #insert-weekly-task, #select-weekly-task, #edit-weekly-task  {
   margin: auto;
   min-width: 300px;
   max-width: 500px;
