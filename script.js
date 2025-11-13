@@ -631,4 +631,6 @@ let incrementor = 0;
   // close edit weekly
   closeEditWeekly.addEventListener("click", event => {
 
+    weeklyInput.value = "";
+
   });
