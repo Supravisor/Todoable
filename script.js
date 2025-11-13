@@ -539,11 +539,11 @@ let incrementor = 0;
 
         editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
          <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-           <li>
-             <label>
-               ${el}
-             </label>
-           </li>`).join("");
+         <li>
+           <label>
+             ${el}
+           </label>
+         </li>`).join("");
 
         insertWeeklyTask.classList.toggle("hidden");
         weekly.classList.toggle("hidden");
@@ -580,6 +580,14 @@ let incrementor = 0;
     if (!modifyAdHoc) {
       return;
     }
+
+    editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+       <li>
+         <label>
+           ${el}
+         </label>
+       </li>`).join("");
 
   });
 
