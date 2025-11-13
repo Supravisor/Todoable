@@ -652,3 +652,8 @@ let incrementor = 0;
   updateWeekly.addEventListener("click", event => {
 
   });
+
+  // delete weekly
+  deleteWeekly.addEventListener("click", event => {
+
+  });
