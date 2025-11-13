@@ -634,4 +634,8 @@ let incrementor = 0;
     weeklyInput.value = "";
     modifyAdHoc = "";
 
+    modifyWeekly.classList.toggle("hidden");
+    editWeeklyTask.classList.toggle("hidden");
+    weekly.classList.toggle("hidden");
+
   });
