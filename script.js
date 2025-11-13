@@ -597,5 +597,7 @@ let incrementor = 0;
       </label>
     </li>`).join("");
 
+    selectWeeklyTask.classList.toggle("hidden");
+
   });
 
