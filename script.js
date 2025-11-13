@@ -473,6 +473,8 @@ let incrementor = 0;
   // modify weekly
   modifyWeekly.addEventListener("click", event => {
 
+    modifyAdHoc = "";
+
     modifyWeekly.classList.toggle("hidden");
     selectWeeklyTask.classList.toggle("hidden");
     weekly.classList.toggle("hidden");
