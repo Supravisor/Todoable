@@ -479,6 +479,9 @@ let incrementor = 0;
   // close weekly
   closeWeekly.addEventListener("click", event => {
 
+    weeklyInput.value = "";
+    modifyAdHoc = "";
+
     modifyWeekly.classList.toggle("hidden");
     selectWeeklyTask.classList.toggle("hidden");
     weekly.classList.toggle("hidden");
