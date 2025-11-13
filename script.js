@@ -54,13 +54,15 @@ const weekly = document.getElementById("weekly");
 const weekDay = document.querySelectorAll(".day");
 const modifyWeekly = document.getElementById("modify-weekly");
 const addWeekly = document.getElementById("add-weekly");
-const editWeeklyTask = document.getElementById("edit-weekly-task");
+const editWeeklyTask = document.getElementById("select-weekly-task-list");
 const selectWeeklyTask = document.getElementById("select-weekly-task");
 const insertWeekly = document.getElementById("insert-weekly");
 const weeklyInput = document.getElementById("weekly-input");
 const closeWeekly = document.getElementById("close-weekly");
 const insertWeeklyTask = document.getElementById("insert-weekly-task");
 const closeAddWeekly = document.getElementById("close-add-weekly");
+const editWeekly = document.getElementById("edit-weekly");
+const editWeeklyTaskList = document.getElementById("edit-weekly-task-list");
 
 // monthly
 const thisDate = new Date();
@@ -410,7 +412,7 @@ let incrementor = 0;
       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
       <li>
         <label id="edit">
-         ${el}
+          ${el}
         </label>
       </li>`).join("");
 
@@ -426,7 +428,7 @@ let incrementor = 0;
     editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
      <li>
-       <label id="edit">
+       <label>
          ${el}
        </label>
      </li>`).join("");
@@ -492,17 +494,17 @@ let incrementor = 0;
         </label>
       </li>`).join("");
 
-    // add weekly
-    addWeekly.addEventListener("click", event => {
+  // add weekly
+  addWeekly.addEventListener("click", event => {
 
-      if (!modifyAdHoc) {
-        return;
-      }
+    if (!modifyAdHoc) {
+      return;
+    }
 
-      selectWeeklyTask.classList.toggle("hidden");
-      insertWeeklyTask.classList.toggle("hidden");
+    selectWeeklyTask.classList.toggle("hidden");
+    insertWeeklyTask.classList.toggle("hidden");
 
-    });
+  });
 
   // insert weekly
   insertWeekly.addEventListener("click", event => {
@@ -514,6 +516,7 @@ let incrementor = 0;
         dailyInput.value = "";
 
         // weekly task list
+
         let weeklyIncrementor = 1000*24*60*60;
 
         for (let i = 0; i < days.length; i++) {
@@ -536,11 +539,11 @@ let incrementor = 0;
 
         editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
          <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-           <li>
-             <label>
-               ${el}
-             </label>
-           </li>`).join("");
+         <li>
+           <label>
+             ${el}
+           </label>
+         </li>`).join("");
 
         insertWeeklyTask.classList.toggle("hidden");
         weekly.classList.toggle("hidden");
@@ -570,3 +573,31 @@ let incrementor = 0;
     modifyWeekly.classList.toggle("hidden");
 
   });
+
+  // edit weekly
+  editWeekly.addEventListener("click", event => {
+
+    if (!modifyAdHoc) {
+      return;
+    }
+
+    editWeeklyTask.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+       <li>
+         <label>
+           ${el}
+         </label>
+       </li>`).join("");
+
+    editWeeklyTaskList.innerHTML = tasks["Weekly"][modifyAdHoc].map(el => `
+    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+    <li>
+      <label id="edit">
+        ${el}
+      </label>
+    </li>`).join("");
+
+    selectWeeklyTask.classList.toggle("hidden");
+
+  });
+
