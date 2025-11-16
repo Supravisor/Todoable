@@ -67,6 +67,7 @@ const editWeeklyTask = document.getElementById("edit-weekly-task");
 const closeEditWeekly = document.getElementById("close-edit-weekly");
 const updateWeekly = document.getElementById("update-weekly");
 const deleteWeekly = document.getElementById("delete-weekly");
+const updateWeeklyTask = document.getElementById("update-weekly-task");
 
 // monthly
 const thisDate = new Date();
@@ -114,6 +115,10 @@ let incrementor = 0;
 
       if (weekly.classList[1] !== "hidden") {
         weekly.classList.add("hidden");
+      }
+
+      if (editWeeklyTask.classList !== "hidden") {
+        editWeeklyTask.classList.add("hidden");
       }
 
       if (month.classList[1] !== "hidden") {
@@ -190,6 +195,10 @@ let incrementor = 0;
 
       if (adHocList.classList[1] !== "hidden") {
         adHocList.classList.add("hidden");
+      }
+
+      if (editWeeklyTask.classList !== "hidden") {
+        editWeeklyTask.classList.add("hidden");
       }
 
       if (month.classList[1] !== "hidden") {
