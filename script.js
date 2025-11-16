@@ -117,6 +117,10 @@ let incrementor = 0;
         weekly.classList.add("hidden");
       }
 
+      if (editWeeklyTask.classList !== "hidden") {
+        editWeeklyTask.classList.add("hidden");
+      }
+
       if (month.classList[1] !== "hidden") {
         month.classList.add("hidden");
       }
