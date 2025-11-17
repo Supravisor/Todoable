@@ -656,16 +656,24 @@ let incrementor = 0;
 
   });
 
-  // update weekly
-  updateWeekly.addEventListener("click", event => {
-
   // close update weekly
   closeUpdateWeekly.addEventListener("click", event => {
+
+    updateWeeklyTask.classList.toggle("hidden");
+    editWeeklyTask.classList.toggle("hidden");
+
+  });
+
+  // update weekly
+  updateWeekly.addEventListener("click", event => {
 
     if (modifyAdHoc === "") {
       return;
     }
 
+    editWeeklyTask.classList.toggle("hidden");
+    updateWeeklyTask.classList.toggle("hidden");
+    weeklyModify.value = modifyAdHoc;
 
   });
 
