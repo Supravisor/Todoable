@@ -68,6 +68,8 @@ const closeEditWeekly = document.getElementById("close-edit-weekly");
 const updateWeekly = document.getElementById("update-weekly");
 const deleteWeekly = document.getElementById("delete-weekly");
 const updateWeeklyTask = document.getElementById("update-weekly-task");
+const closeUpdateWeekly = document.getElementById("close-update-weekly");
+const weeklyModify = document.getElementById("weekly-modify");
 
 // monthly
 const thisDate = new Date();
@@ -511,7 +513,6 @@ let incrementor = 0;
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
       <li>
-
         <label>
           ${el}
         </label>
@@ -635,30 +636,44 @@ let incrementor = 0;
     selectWeeklyTask.classList.toggle("hidden");
     editWeeklyTask.classList.toggle("hidden");
 
+    modifyAdHoc = "";
+
   });
 
   // close edit weekly
   closeEditWeekly.addEventListener("click", event => {
 
-    weeklyInput.value = "";
-    modifyAdHoc = "";
-
-    modifyWeekly.classList.toggle("hidden");
-    editWeeklyTask.classList.toggle("hidden");
-    weekly.classList.toggle("hidden");
-
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
       <li>
         <label>
           ${el}
         </label>
       </li>`).join("");
 
+    selectWeeklyTask.classList.toggle("hidden");
+    editWeeklyTask.classList.toggle("hidden");
+
+  });
+
+  // close update weekly
+  closeUpdateWeekly.addEventListener("click", event => {
+
+    updateWeeklyTask.classList.toggle("hidden");
+    editWeeklyTask.classList.toggle("hidden");
+
   });
 
   // update weekly
   updateWeekly.addEventListener("click", event => {
+
+    if (modifyAdHoc === "") {
+      return;
+    }
+
+    editWeeklyTask.classList.toggle("hidden");
+    updateWeeklyTask.classList.toggle("hidden");
+    weeklyModify.value = modifyAdHoc;
 
   });
 
