@@ -659,6 +659,14 @@ let incrementor = 0;
   // update weekly
   updateWeekly.addEventListener("click", event => {
 
+  // close update weekly
+  closeUpdateWeekly.addEventListener("click", event => {
+
+    if (modifyAdHoc === "") {
+      return;
+    }
+
+
   });
 
   // delete weekly
