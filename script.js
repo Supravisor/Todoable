@@ -685,4 +685,6 @@ let incrementor = 0;
       return;
     }
 
+    deleteWeeklyTask.classList.toggle("hidden");
+
   });
