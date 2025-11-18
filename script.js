@@ -686,5 +686,6 @@ let incrementor = 0;
     }
 
     deleteWeeklyTask.classList.toggle("hidden");
+    deleteWeeklyTaskItem.innerText = modifyAdHoc;
 
   });
