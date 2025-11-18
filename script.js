@@ -507,7 +507,6 @@ let incrementor = 0;
 
     weeklyInput.value = "";
     modifyAdHoc = "";
-
     modifyWeekly.classList.toggle("hidden");
     selectWeeklyTask.classList.toggle("hidden");
     weekly.classList.toggle("hidden");
@@ -628,12 +627,12 @@ let incrementor = 0;
       </li>`).join("");
 
     editWeeklyTaskList.innerHTML = tasks["Weekly"][modifyAdHoc].map(el => `
-    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-    <li>
-      <label id="edit">
-        ${el}
-      </label>
-    </li>`).join("");
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <li>
+        <label id="edit">
+          ${el}
+        </label>
+      </li>`).join("");
 
     selectWeeklyTask.classList.toggle("hidden");
     editWeeklyTask.classList.toggle("hidden");
@@ -681,5 +680,9 @@ let incrementor = 0;
 
   // delete weekly
   deleteWeekly.addEventListener("click", event => {
+
+    if (modifyAdHoc === "") {
+      return;
+    }
 
   });
