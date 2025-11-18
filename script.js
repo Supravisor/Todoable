@@ -692,7 +692,7 @@ let incrementor = 0;
 
     editWeeklyTask.classList.toggle("hidden");
     updateWeeklyTask.classList.toggle("hidden");
-    weeklyModify.value = modifyAdHoc;
+    weeklyModify.value = selectDay;
 
   });
 
