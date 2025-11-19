@@ -764,6 +764,7 @@ let incrementor = 0;
     for (let i = 0; i < removeItem.length; i++) {
       if (removeItem[i] === selectDay) {
         tasks["Weekly"][modifyAdHoc].splice(i, 1);
+        selectDay = "";
       }
     }
 
