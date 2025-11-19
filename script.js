@@ -792,4 +792,7 @@ let incrementor = 0;
   // cancel delete weekly
   cancelDeleteWeekly.addEventListener("click", event => {
 
+    editWeeklyTask.classList.toggle("hidden");
+    deleteWeeklyTask.classList.toggle("hidden");
+
   });
