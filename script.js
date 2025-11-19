@@ -766,4 +766,12 @@ let incrementor = 0;
       }
     }
 
+    editWeeklyTaskList.innerHTML = tasks["Weekly"][modifyAdHoc].map(el => `
+      <input type="radio" name="edit" value="${el}" onclick="selectDay = this.value;" />
+      <li>
+        <label id="edit">
+          ${el}
+        </label>
+      </li>`).join("");
+
   });
