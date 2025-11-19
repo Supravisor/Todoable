@@ -711,4 +711,6 @@ let incrementor = 0;
   // confirmModifyWeekly
   confirmModifyWeekly.addEventListener("click", event => {
 
+    let modifyItem = tasks["Weekly"][modifyAdHoc];
+
   });
