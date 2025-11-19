@@ -74,6 +74,9 @@ const deleteWeeklyTask = document.getElementById("delete-weekly-task");
 const deleteWeeklyTaskItem = document.getElementById("delete-weekly-task-item");
 let selectDay;
 const confirmModifyWeekly = document.getElementById("confirm-modify-weekly");
+const closeDeleteWeekly = document.getElementById("close-delete-weekly");
+const confirmDeleteWeekly = document.getElementById("confirm-delete-weekly");
+const cancelDeleteWeekly = document.getElementById("cancel-delete-weekly");
 
 // monthly
 const thisDate = new Date();
@@ -664,7 +667,7 @@ let incrementor = 0;
     selectDay = "";
 
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
       <li>
         <label>
           ${el}
@@ -704,12 +707,13 @@ let incrementor = 0;
       return;
     }
 
+    editWeeklyTask.classList.toggle("hidden");
     deleteWeeklyTask.classList.toggle("hidden");
-    deleteWeeklyTaskItem.innerText = modifyAdHoc;
+    deleteWeeklyTaskItem.innerText = selectDay;
 
   });
 
-  // confirmModifyWeekly
+  // confirm modify weekly
   confirmModifyWeekly.addEventListener("click", event => {
 
     let modifyItem = tasks["Weekly"][modifyAdHoc];
@@ -740,6 +744,55 @@ let incrementor = 0;
 
     updateWeeklyTask.classList.toggle("hidden");
     editWeeklyTask.classList.toggle("hidden");
-    modifyAdHoc = "";
+    selectDay = "";
+
+  });
+
+  // close weekly delete
+  closeDeleteWeekly.addEventListener("click", event => {
+
+    editWeeklyTask.classList.toggle("hidden");
+    deleteWeeklyTask.classList.toggle("hidden");
+
+  });
+
+  // confirm delete weekly
+  confirmDeleteWeekly.addEventListener("click", event => {
+
+    let removeItem = tasks["Weekly"][modifyAdHoc];
+
+    for (let i = 0; i < removeItem.length; i++) {
+      if (removeItem[i] === selectDay) {
+        tasks["Weekly"][modifyAdHoc].splice(i, 1);
+        selectDay = "";
+      }
+    }
+
+    editWeeklyTaskList.innerHTML = tasks["Weekly"][modifyAdHoc].map(el => `
+      <input type="radio" name="edit" value="${el}" onclick="selectDay = this.value;" />
+      <li>
+        <label id="edit">
+          ${el}
+        </label>
+      </li>`).join("");
+
+      if (tasks["Weekly"][modifyAdHoc].length === 0) {
+        modifyAdHoc = "";
+        selectDay = "";
+        deleteWeeklyTask.classList.toggle("hidden");
+        selectWeeklyTask.classList.toggle("hidden");
+        return;
+      }
+
+      editWeeklyTask.classList.toggle("hidden");
+      deleteWeeklyTask.classList.toggle("hidden");
+
+  });
+
+  // cancel delete weekly
+  cancelDeleteWeekly.addEventListener("click", event => {
+
+    editWeeklyTask.classList.toggle("hidden");
+    deleteWeeklyTask.classList.toggle("hidden");
 
   });
