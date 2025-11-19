@@ -711,7 +711,7 @@ let incrementor = 0;
 
   });
 
-  // confirmModifyWeekly
+  // confirm modify weekly
   confirmModifyWeekly.addEventListener("click", event => {
 
     let modifyItem = tasks["Weekly"][modifyAdHoc];
@@ -743,5 +743,11 @@ let incrementor = 0;
     updateWeeklyTask.classList.toggle("hidden");
     editWeeklyTask.classList.toggle("hidden");
     modifyAdHoc = "";
+
+  });
+
+  // close weekly delete
+  closeDeleteWeekly.addEventListener("click", event => {
+
 
   });
