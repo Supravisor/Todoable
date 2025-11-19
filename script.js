@@ -758,4 +758,5 @@ let incrementor = 0;
   // confirm delete weekly
   confirmDeleteWeekly.addEventListener("click", event => {
 
+    let removeItem = tasks["Weekly"][modifyAdHoc];
   });
