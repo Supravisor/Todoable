@@ -759,4 +759,11 @@ let incrementor = 0;
   confirmDeleteWeekly.addEventListener("click", event => {
 
     let removeItem = tasks["Weekly"][modifyAdHoc];
+
+    for (let i = 0; i < removeItem.length; i++) {
+      if (removeItem[i] === selectDay) {
+        tasks["Weekly"][modifyAdHoc].splice(i, 1);
+      }
+    }
+
   });
