@@ -475,12 +475,12 @@ let incrementor = 0;
     }
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
-      <li>
-        <label id="edit">
-          ${el}
-        </label>
-      </li>`).join("");
+        <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+        <li>
+          <label id="edit">
+            ${el}
+          </label>
+        </li>`).join("");
 
   });
 
@@ -699,7 +699,7 @@ let incrementor = 0;
   // delete weekly
   deleteWeekly.addEventListener("click", event => {
 
-    if (modifyAdHoc === "") {
+    if (selectDay === "") {
       return;
     }
 
