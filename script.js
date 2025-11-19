@@ -667,7 +667,7 @@ let incrementor = 0;
     selectDay = "";
 
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
       <li>
         <label>
           ${el}
@@ -744,7 +744,7 @@ let incrementor = 0;
 
     updateWeeklyTask.classList.toggle("hidden");
     editWeeklyTask.classList.toggle("hidden");
-    modifyAdHoc = "";
+    selectDay = "";
 
   });
 
