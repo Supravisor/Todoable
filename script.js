@@ -729,4 +729,12 @@ let incrementor = 0;
         </label>
       </li>`).join("");
 
+    selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
+      <li>
+        <label>
+          ${el}
+        </label>
+      </li>`).join("");
+
   });
