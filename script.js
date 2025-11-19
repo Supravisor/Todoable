@@ -707,3 +707,8 @@ let incrementor = 0;
     deleteWeeklyTaskItem.innerText = modifyAdHoc;
 
   });
+
+  // confirmModifyWeekly
+  confirmModifyWeekly.addEventListener("click", event => {
+
+  });
