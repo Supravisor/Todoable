@@ -705,6 +705,7 @@ let incrementor = 0;
       return;
     }
 
+    editWeeklyTask.classList.toggle("hidden");
     deleteWeeklyTask.classList.toggle("hidden");
     deleteWeeklyTaskItem.innerText = modifyAdHoc;
 
