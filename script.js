@@ -788,3 +788,8 @@ let incrementor = 0;
       deleteWeeklyTask.classList.toggle("hidden");
 
   });
+
+  // cancel delete weekly
+  cancelDeleteWeekly.addEventListener("click", event => {
+
+  });
