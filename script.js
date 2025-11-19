@@ -699,7 +699,7 @@ let incrementor = 0;
   // delete weekly
   deleteWeekly.addEventListener("click", event => {
 
-    if (selectDay === "") {
+    if (!selectDay) {
       return;
     }
 
