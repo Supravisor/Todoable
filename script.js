@@ -76,6 +76,7 @@ let selectDay;
 const confirmModifyWeekly = document.getElementById("confirm-modify-weekly");
 const closeDeleteWeekly = document.getElementById("close-delete-weekly");
 const confirmDeleteWeekly = document.getElementById("confirm-delete-weekly");
+const cancelDeleteWeekly = document.getElementById("cancel-delete-weekly");
 
 // monthly
 const thisDate = new Date();
