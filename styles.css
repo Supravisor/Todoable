@@ -146,6 +146,10 @@ label {
   padding-top: 1em;
 }
 
+#delete-weekly-task-item {
+  text-align: center;
+}
+
 @media (min-width: 0px) {
 
   .short {
