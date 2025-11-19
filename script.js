@@ -660,6 +660,8 @@ let incrementor = 0;
   // close edit weekly
   closeEditWeekly.addEventListener("click", event => {
 
+    selectDay = "";
+
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
       <li>
