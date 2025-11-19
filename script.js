@@ -686,7 +686,7 @@ let incrementor = 0;
   // update weekly
   updateWeekly.addEventListener("click", event => {
 
-    if (selectDay === "") {
+    if (!selectDay) {
       return;
     }
 
