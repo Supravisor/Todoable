@@ -75,6 +75,7 @@ const deleteWeeklyTaskItem = document.getElementById("delete-weekly-task-item");
 let selectDay;
 const confirmModifyWeekly = document.getElementById("confirm-modify-weekly");
 const closeDeleteWeekly = document.getElementById("close-delete-weekly");
+const confirmDeleteWeekly = document.getElementById("confirm-delete-weekly");
 
 // monthly
 const thisDate = new Date();
