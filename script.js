@@ -708,7 +708,7 @@ let incrementor = 0;
 
     editWeeklyTask.classList.toggle("hidden");
     deleteWeeklyTask.classList.toggle("hidden");
-    deleteWeeklyTaskItem.innerText = modifyAdHoc;
+    deleteWeeklyTaskItem.innerText = selectDay;
 
   });
 
