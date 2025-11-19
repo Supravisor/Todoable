@@ -774,4 +774,12 @@ let incrementor = 0;
         </label>
       </li>`).join("");
 
+      if (tasks["Weekly"][modifyAdHoc].length === 0) {
+        modifyAdHoc = "";
+        selectDay = "";
+        deleteWeeklyTask.classList.toggle("hidden");
+        selectWeeklyTask.classList.toggle("hidden");
+        return;
+      }
+
   });
