@@ -713,4 +713,12 @@ let incrementor = 0;
 
     let modifyItem = tasks["Weekly"][modifyAdHoc];
 
+    for (let i = 0; i < modifyItem.length; i++) {
+
+      if (modifyItem[i] === selectDay) {
+        tasks["Weekly"][modifyAdHoc][i] = weeklyModify.value;
+        break;
+      }
+    }
+
   });
