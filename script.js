@@ -84,7 +84,6 @@ let thisMonth = thisDate.getMonth();
 let thisYear = thisDate.getFullYear();
 
 let diff = new Date(thisYear, thisMonth, thisDay).getTime();
-let incrementor = 0;
 
   anchor.addEventListener("click", event => {
 
