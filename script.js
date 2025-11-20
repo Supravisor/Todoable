@@ -12,8 +12,7 @@ let tasks = {
     "Friday": ["Fiesta Friday"],
     "Saturday": ["Salsa Saturday"],
     "Sunday": ["Sunday siesta"]
-   },
-  "Monthly": ["Status reports"]
+   }
 }
 
 // nav
