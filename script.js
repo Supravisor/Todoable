@@ -204,10 +204,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         editWeeklyTask.classList.add("hidden");
       }
 
-      if (month.classList[1] !== "hidden") {
-        month.classList.add("hidden");
-      }
-
       for (let i = 0; i < days.length; i++) {
 
         let weeklyDate = new Date(diff + weeklyIncrementor);
