@@ -77,7 +77,7 @@ const closeDeleteWeekly = document.getElementById("close-delete-weekly");
 const confirmDeleteWeekly = document.getElementById("confirm-delete-weekly");
 const cancelDeleteWeekly = document.getElementById("cancel-delete-weekly");
 
-// monthly
+// date
 const thisDate = new Date();
 let thisDay = thisDate.getDate();
 let thisMonth = thisDate.getMonth();
@@ -217,65 +217,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
 
         weeklyIncrementor += 1000*24*60*60;
 
-      }
-
-    }
-
-    // monthly
-    const table = document.querySelector("table");
-    const months = document.querySelectorAll("th");
-
-    if (event.target.innerText === "Monthly") {
-
-      if (insertDailyTask.classList.length !== 1) {
-        return;
-      }
-
-      if (edit.classList.length !== 2) {
-        return;
-      }
-
-      if (updateDailyTask.classList.length !== 1) {
-        return;
-      }
-
-      if (modifyWeekly.classList !== "hidden") {
-        modifyWeekly.classList.add("hidden");
-      }
-
-      month.classList.toggle("hidden");
-
-      if (insertDailyTask.classList !== "hidden") {
-        addDaily.classList.add("hidden");
-        editDaily.classList.add("hidden");
-      }
-
-      if (taskList.classList[1] !== "hidden") {
-        taskList.classList.add("hidden");
-      }
-
-      if (title.classList[1] !== "hidden") {
-        title.classList.add("hidden");
-      }
-
-      if (adHocTitle.classList[1] !== "hidden") {
-        adHocTitle.classList.add("hidden");
-      }
-
-      if (adHocList.classList[1] !== "hidden") {
-        adHocList.classList.add("hidden");
-      }
-
-      if (weekly.classList[1] !== "hidden") {
-        weekly.classList.add("hidden");
-      }
-
-        incrementor = 0;
-
-      for (let j = 0; j < months.length; j++) {
-        let date = new Date(diff + incrementor)
-        months[j].innerHTML = `${new Date(date + incrementor).toLocaleString("default", { weekday: "short" })} ${date.getDate()}`;
-        incrementor += 1000*24*60*60;
       }
 
     }
