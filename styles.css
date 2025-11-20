@@ -29,6 +29,7 @@ button {
   border: 1px solid blue;
   border-radius: 6px;
   padding: 11px 12px;
+  margin: 8px 8px 8px;
 }
 
 button:active {
