@@ -21,6 +21,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   font-family: Corbel;
+  flex-wrap: wrap;
 }
 
 button {
