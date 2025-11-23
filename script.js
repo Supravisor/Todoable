@@ -25,6 +25,7 @@ const periods = anchor.innerText.split(" ");
 
   anchor.innerHTML = periods.map(el => `<button>${el}</button>`).join("");
   anchor.innerHTML += `<button id="modify-weekly" class="hidden">Modify task</button>`;
+
 // daily
 const addDaily = document.getElementById("add-daily");
 const insertDaily = document.getElementById("insert-daily");
@@ -61,6 +62,7 @@ const closeWeekly = document.getElementById("close-weekly");
 const insertWeeklyTask = document.getElementById("insert-weekly-task");
 const closeAddWeekly = document.getElementById("close-add-weekly");
 const editWeekly = document.getElementById("edit-weekly");
+const weeklyEdit = document.getElementById("weekly-edit");
 const editWeeklyTaskList = document.getElementById("edit-weekly-task-list");
 const editWeeklyTask = document.getElementById("edit-weekly-task");
 const closeEditWeekly = document.getElementById("close-edit-weekly");
