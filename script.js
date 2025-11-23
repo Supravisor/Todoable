@@ -601,6 +601,7 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
   closeEditWeekly.addEventListener("click", event => {
 
     selectDay = "";
+    modifyAdHoc = "";
 
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
