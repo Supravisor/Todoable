@@ -627,6 +627,8 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
   // update weekly
   updateWeekly.addEventListener("click", event => {
 
+    weeklyUpdate.innerHTML = `<label class="task-label" for="weekly-update">Update task for ${modifyAdHoc}</label>`;
+
     if (!selectDay) {
       return;
     }
