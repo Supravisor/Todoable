@@ -17,7 +17,7 @@ nav {
   padding-top: 8px;
 }
 
-#anchor, #add-edit-buttons, #weekly-add-edit-buttons {
+#anchor, #add-edit-buttons {
   display: flex;
   justify-content: space-evenly;
   font-family: Corbel;
@@ -129,10 +129,6 @@ label {
 }
 
 /* Weekly */
-
-#weekly-add-edit-buttons {
-  margin-bottom: 1em;
-}
 
 #weekly h2 {
   text-align: center;

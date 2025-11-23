@@ -24,7 +24,7 @@ const anchor = document.getElementById("anchor");
 const periods = anchor.innerText.split(" ");
 
   anchor.innerHTML = periods.map(el => `<button>${el}</button>`).join("");
-
+  anchor.innerHTML += `<button id="modify-weekly" class="hidden">Modify task</button>`;
 // daily
 const addDaily = document.getElementById("add-daily");
 const insertDaily = document.getElementById("insert-daily");
