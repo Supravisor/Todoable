@@ -574,6 +574,8 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
       return;
     }
 
+    weeklyEdit.innerHTML = `<label class="task-label" for="weekly-edit">Edit task for ${modifyAdHoc}</label>`;
+
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
       <li>
