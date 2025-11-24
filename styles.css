@@ -17,7 +17,7 @@ nav {
   padding-top: 8px;
 }
 
-#anchor, #add-edit-buttons {
+#anchor {
   display: flex;
   justify-content: space-evenly;
   font-family: Corbel;
