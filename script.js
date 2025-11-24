@@ -25,6 +25,8 @@ const periods = anchor.innerText.split(" ");
 
   anchor.innerHTML = periods.map(el => `<button>${el}</button>`).join("");
   anchor.innerHTML += `<button id="modify-weekly" class="hidden">Modify task</button>`;
+  anchor.innerHTML += `<button id="add-daily" class="hidden">Add task</button>`;
+  anchor.innerHTML += `<button id="edit-daily" class="hidden">Edit task</button>`;
 
 // daily
 const addDaily = document.getElementById("add-daily");
@@ -68,8 +70,8 @@ const editWeeklyTask = document.getElementById("edit-weekly-task");
 const closeEditWeekly = document.getElementById("close-edit-weekly");
 const updateWeekly = document.getElementById("update-weekly");
 const deleteWeekly = document.getElementById("delete-weekly");
-const updateWeeklyTask = document.getElementById("update-weekly-task");
 const weeklyUpdate = document.getElementById("weekly-update");
+const updateWeeklyTask = document.getElementById("update-weekly-task");
 const closeUpdateWeekly = document.getElementById("close-update-weekly");
 const weeklyModify = document.getElementById("weekly-modify");
 const deleteWeeklyTask = document.getElementById("delete-weekly-task");
@@ -465,7 +467,7 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
       }
 
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-      <input type="radio" name="edit" value="${el}" onclick="selectDay = this.value;" />
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
       <li>
         <label>
           ${el}

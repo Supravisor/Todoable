@@ -17,7 +17,7 @@ nav {
   padding-top: 8px;
 }
 
-#anchor, #add-edit-buttons {
+#anchor {
   display: flex;
   justify-content: space-evenly;
   font-family: Corbel;
@@ -29,7 +29,7 @@ button {
   border: 1px solid blue;
   border-radius: 6px;
   padding: 11px 12px;
-  margin: 8px 8px 8px;
+  margin: 8px 12px 8px;
 }
 
 button:active {
@@ -162,6 +162,22 @@ label {
 
 }
 
+@media (min-width: 275px) {
+
+  button {
+    margin: 8px 16px 8px;
+  }
+
+}
+
+@media (min-width: 290px) {
+
+  button {
+    margin: 8px 20px 8px;
+  }
+
+}
+
 @media (min-width: 300px) {
 
   .short {
@@ -170,6 +186,30 @@ label {
 
   .long {
     display: block;
+  }
+
+}
+
+@media (min-width: 320px) {
+
+  button {
+    margin: 8px 24px 8px;
+  }
+
+}
+
+@media (min-width: 345px) {
+
+  button {
+    margin: 8px 32px 8px;
+  }
+
+}
+
+@media (min-width: 390px) {
+
+  button {
+  margin: 8px 12px 8px;
   }
 
 }
