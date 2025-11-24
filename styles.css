@@ -192,6 +192,10 @@ label {
 
 @media (min-width: 320px) {
 
+  button {
+    margin: 8px 24px 8px;
+  }
+
 }
 
 @media (min-width: 1200px) {
