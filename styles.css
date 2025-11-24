@@ -162,6 +162,10 @@ label {
 
 }
 
+@media (min-width: 275px) {
+
+}
+
 @media (min-width: 300px) {
 
   .short {
