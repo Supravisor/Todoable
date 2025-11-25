@@ -211,8 +211,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
   addDaily.addEventListener("click", event => {
     addDaily.classList.toggle("hidden");
     insertDailyTask.classList.toggle("hidden");
-    title.classList.toggle("hidden");
-    taskList.classList.toggle("hidden");
     editDaily.classList.toggle("hidden");
   });
 
