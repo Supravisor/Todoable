@@ -232,10 +232,6 @@ label {
     width: calc(100vw/7);
   }
 
-  .sub-tasks {
-    margin-left: -25vw;
-  }
-
 }
 
 .hidden {
