@@ -133,16 +133,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         editWeeklyTask.classList.add("hidden");
       }
 
-      // recurring
-      title.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
-      taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
-      <input type="checkbox" />
-      <li>
-        <label>
-          ${el}
-        </label>
-      </li>`).join("");
-
        // ad hoc
        adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
        adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
