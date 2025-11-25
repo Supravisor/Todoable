@@ -322,16 +322,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     adHocTitle.classList.remove("hidden");
     adHocList.classList.remove("hidden");
 
-    // recurring
-    title.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[0]}</h2>`;
-    taskList.innerHTML = tasks["Daily"]["Recurring"].map(el => `
-    <input type="checkbox" />
-      <li>
-        <label>
-          ${el}
-        </label>
-      </li>`).join("");
-
      // ad hoc
      adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[1]}</h2>`;
      adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
