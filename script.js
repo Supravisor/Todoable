@@ -248,8 +248,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
   closeAdHoc.addEventListener("click", event => {
 
     addDaily.classList.remove("hidden");
-    title.classList.remove("hidden");
-    taskList.classList.remove("hidden");
     adHocTitle.classList.remove("hidden");
     adHocList.classList.remove("hidden");
     insertDailyTask.classList.toggle("hidden");
