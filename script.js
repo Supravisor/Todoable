@@ -43,8 +43,6 @@ const deleteDaily = document.getElementById("delete-daily");
 let modifyAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
 const closeUpdateAdHoc = document.getElementById("close-update-ad-hoc");
-const title = document.getElementById("title");
-const taskList = document.getElementById("task-list");
 const adHocTitle = document.getElementById("ad-hoc-title");
 const adHocList = document.getElementById("ad-hoc-list");
 const dailyInput = document.getElementById("daily-input");
