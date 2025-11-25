@@ -1,7 +1,6 @@
 
 let tasks = {
   "Daily": {
-    "Recurring": ["voicemail", "email"],
     "Ad hoc": ["plan report", "design brief"]
   },
   "Weekly": {
@@ -44,8 +43,6 @@ const deleteDaily = document.getElementById("delete-daily");
 let modifyAdHoc;
 const closeAdHoc = document.getElementById("close-ad-hoc");
 const closeUpdateAdHoc = document.getElementById("close-update-ad-hoc");
-const title = document.getElementById("title");
-const taskList = document.getElementById("task-list");
 const adHocTitle = document.getElementById("ad-hoc-title");
 const adHocList = document.getElementById("ad-hoc-list");
 const dailyInput = document.getElementById("daily-input");
@@ -108,8 +105,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         editDaily.classList.toggle("hidden");
       }
 
-      title.classList.toggle("hidden");
-      taskList.classList.toggle("hidden");
       adHocTitle.classList.toggle("hidden");
       adHocList.classList.toggle("hidden");
 
@@ -133,18 +128,8 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         editWeeklyTask.classList.add("hidden");
       }
 
-      // recurring
-      title.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
-      taskList.innerHTML = tasks[event.target.innerText]["Recurring"].map(el => `
-      <input type="checkbox" />
-      <li>
-        <label>
-          ${el}
-        </label>
-      </li>`).join("");
-
        // ad hoc
-       adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[1]}</h2>`;
+       adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
        adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
        <input type="checkbox" />
        <li>
@@ -189,14 +174,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         editDaily.classList.add("hidden");
       }
 
-      if (taskList.classList[1] !== "hidden") {
-        taskList.classList.add("hidden");
-      }
-
-      if (title.classList[1] !== "hidden") {
-        title.classList.add("hidden");
-      }
-
       if (adHocTitle.classList[1] !== "hidden") {
         adHocTitle.classList.add("hidden");
       }
@@ -232,8 +209,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
   addDaily.addEventListener("click", event => {
     addDaily.classList.toggle("hidden");
     insertDailyTask.classList.toggle("hidden");
-    title.classList.toggle("hidden");
-    taskList.classList.toggle("hidden");
     editDaily.classList.toggle("hidden");
   });
 
@@ -247,7 +222,7 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         dailyInput.value = "";
 
         // ad hoc
-        adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[1]}</h2>`;
+        adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[0]}</h2>`;
         adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
         <input type="checkbox" />
         <li>
@@ -259,8 +234,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         addDaily.classList.toggle("hidden");
         insertDailyTask.classList.toggle("hidden");
 
-        title.classList.remove("hidden");
-        taskList.classList.remove("hidden");
         adHocTitle.classList.remove("hidden");
         adHocList.classList.remove("hidden");
         editDaily.classList.toggle("hidden");
@@ -273,8 +246,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
   closeAdHoc.addEventListener("click", event => {
 
     addDaily.classList.remove("hidden");
-    title.classList.remove("hidden");
-    taskList.classList.remove("hidden");
     adHocTitle.classList.remove("hidden");
     adHocList.classList.remove("hidden");
     insertDailyTask.classList.toggle("hidden");
@@ -287,8 +258,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
 
     addDaily.classList.toggle("hidden");
     editDaily.classList.toggle("hidden");
-    title.classList.toggle("hidden");
-    taskList.classList.toggle("hidden");
     adHocTitle.classList.toggle("hidden");
     adHocList.classList.toggle("hidden");
 
@@ -327,23 +296,11 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     edit.classList.toggle("hidden");
     addDaily.classList.toggle("hidden");
     editDaily.classList.toggle("hidden");
-    title.classList.remove("hidden");
-    taskList.classList.remove("hidden");
     adHocTitle.classList.remove("hidden");
     adHocList.classList.remove("hidden");
 
-    // recurring
-    title.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[0]}</h2>`;
-    taskList.innerHTML = tasks["Daily"]["Recurring"].map(el => `
-    <input type="checkbox" />
-      <li>
-        <label>
-          ${el}
-        </label>
-      </li>`).join("");
-
      // ad hoc
-     adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[1]}</h2>`;
+     adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[0]}</h2>`;
      adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
      <input type="checkbox" />
      <li>
