@@ -176,14 +176,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         editDaily.classList.add("hidden");
       }
 
-      if (taskList.classList[1] !== "hidden") {
-        taskList.classList.add("hidden");
-      }
-
-      if (title.classList[1] !== "hidden") {
-        title.classList.add("hidden");
-      }
-
       if (adHocTitle.classList[1] !== "hidden") {
         adHocTitle.classList.add("hidden");
       }
