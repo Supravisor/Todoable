@@ -210,6 +210,8 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     addDaily.classList.toggle("hidden");
     insertDailyTask.classList.toggle("hidden");
     editDaily.classList.toggle("hidden");
+    adHocTitle.classList.toggle("hidden");
+    adHocList.classList.toggle("hidden");
   });
 
   // insert ad hoc
