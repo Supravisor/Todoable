@@ -134,7 +134,7 @@ label {
 
 /* Weekly */
 
-#weekly h2 {
+h2 {
   text-align: center;
   border: 2px solid black;
   border-radius: 6px;
