@@ -79,6 +79,21 @@ h3 {
   max-width: 500px;
 }
 
+.daily {
+  margin: auto;
+}
+
+.daily {
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.current {
+  min-width: 0px;
+  max-width: 500px;
+  margin: auto;
+}
+
 .buttons {
   display: flex;
   justify-content: space-around;
@@ -103,10 +118,19 @@ h2, h3 {
   font-family: Tahoma;
 }
 
-#task-list li, #ad-hoc-list li, #edit-daily-task li, #select-weekly-task-list li, #edit-weekly-task-list li {
+h3 {
+  font-size: 1.17em;
+}
+
+#task-list li, #edit-daily-task li, #select-weekly-task-list li, #edit-weekly-task-list li {
   padding-bottom: 1em;
   margin-top: -2.2em;
   margin-left: 4em;
+}
+
+#ad-hoc-list li {
+  padding-bottom: 1em;
+  margin-left: -1.75em;
 }
 
 #edit-daily-task, #delete-daily-task, #select-weekly-task-list, #edit-weekly-task-list {
@@ -124,13 +148,9 @@ input {
   width: 44px;
 }
 
-label {
-  margin-top: -1.35em;
-}
-
 /* Weekly */
 
-#weekly h2 {
+h2 {
   text-align: center;
   border: 2px solid black;
   border-radius: 6px;
@@ -152,11 +172,11 @@ label {
 
 @media (min-width: 0px) {
 
-  .short {
+  .short, .short-daily {
     display: block;
   }
 
-  .long {
+  .long, .long-daily {
     display: none;
   }
 
@@ -204,6 +224,14 @@ label {
     margin: 8px 32px 8px;
   }
 
+  .short-daily {
+    display: none;
+  }
+
+  .long-daily {
+    display: block;
+  }
+
 }
 
 @media (min-width: 390px) {
@@ -228,8 +256,9 @@ label {
     display: flex;
   }
 
-  .day {
-    width: calc(100vw/7);
+  .daily {
+    margin: unset;
+    min-width: calc(100vw/7 - 4px);
   }
 
 }

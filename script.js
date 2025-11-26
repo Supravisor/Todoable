@@ -1,7 +1,7 @@
 
 let tasks = {
   "Daily": {
-    "Ad hoc": ["plan report", "design brief"]
+    "Ad hoc": []
   },
   "Weekly": {
     "Monday": ["Mexican Monday"],
@@ -128,15 +128,15 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         editWeeklyTask.classList.add("hidden");
       }
 
-       // ad hoc
-       adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
-       adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
-       <input type="checkbox" />
-       <li>
-         <label>
-           ${el}
-         </label>
-       </li>`).join("");
+      // ad hoc
+      adHocTitle.innerHTML = `<h2 class="short-daily">${new Date().toLocaleString("default", { weekday: "short" })} ${new Date().getDate()}</h2>`;
+      adHocTitle.innerHTML += `<h2 class="long-daily">${new Date().toLocaleString("default", { weekday: "long" })} ${new Date().getDate()}</h2>`;
+      adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
+        <li>
+          <label>
+            ${el}
+          </label>
+        </li>`).join("");
 
     }
 
@@ -210,6 +210,8 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     addDaily.classList.toggle("hidden");
     insertDailyTask.classList.toggle("hidden");
     editDaily.classList.toggle("hidden");
+    adHocTitle.classList.toggle("hidden");
+    adHocList.classList.toggle("hidden");
   });
 
   // insert ad hoc
@@ -222,14 +224,14 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         dailyInput.value = "";
 
         // ad hoc
-        adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[0]}</h2>`;
+        adHocTitle.innerHTML = `<h2 class="short-daily">${new Date().toLocaleString("default", { weekday: "short" })} ${new Date().getDate()}</h2>`;
+        adHocTitle.innerHTML += `<h2 class="long-daily">${new Date().toLocaleString("default", { weekday: "long" })} ${new Date().getDate()}</h2>`;
         adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-        <input type="checkbox" />
-        <li>
-          <label>
-            ${el}
-          </label>
-        </li>`).join("");
+          <li>
+            <label>
+              ${el}
+            </label>
+          </li>`).join("");
 
         addDaily.classList.toggle("hidden");
         insertDailyTask.classList.toggle("hidden");
@@ -299,15 +301,15 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     adHocTitle.classList.remove("hidden");
     adHocList.classList.remove("hidden");
 
-     // ad hoc
-     adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[0]}</h2>`;
-     adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-     <input type="checkbox" />
-     <li>
-       <label>
-         ${el}
-       </label>
-     </li>`).join("");
+    // ad hoc
+    adHocTitle.innerHTML = `<h2 class="short-daily">${new Date().toLocaleString("default", { weekday: "short" })} ${new Date().getDate()}</h2>`;
+    adHocTitle.innerHTML += `<h2 class="long-daily">${new Date().toLocaleString("default", { weekday: "long" })} ${new Date().getDate()}</h2>`;
+    adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+      <li>
+        <label>
+          ${el}
+        </label>
+      </li>`).join("");
 
   });
 
