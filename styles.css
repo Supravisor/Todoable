@@ -241,8 +241,9 @@ h2 {
     display: flex;
   }
 
-  .day {
-    width: calc(100vw/7);
+  .daily {
+    margin: unset;
+    min-width: calc(100vw/7 - 4px);
   }
 
 }
