@@ -122,10 +122,15 @@ h3 {
   font-size: 1.17em;
 }
 
-#task-list li, #ad-hoc-list li, #edit-daily-task li, #select-weekly-task-list li, #edit-weekly-task-list li {
+#task-list li, #edit-daily-task li, #select-weekly-task-list li, #edit-weekly-task-list li {
   padding-bottom: 1em;
   margin-top: -2.2em;
   margin-left: 4em;
+}
+
+#ad-hoc-list li {
+  padding-bottom: 1em;
+  margin-left: -1.75em;
 }
 
 #edit-daily-task, #delete-daily-task, #select-weekly-task-list, #edit-weekly-task-list {
