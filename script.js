@@ -132,7 +132,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
       adHocTitle.innerHTML = `<h2 class="short-daily">${new Date().toLocaleString("default", { weekday: "short" })} ${new Date().getDate()}</h2>`;
       adHocTitle.innerHTML += `<h2 class="long-daily">${new Date().toLocaleString("default", { weekday: "long" })} ${new Date().getDate()}</h2>`;
       adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
-        <input type="checkbox" />
         <li>
           <label>
             ${el}
