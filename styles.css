@@ -224,6 +224,14 @@ h2 {
     margin: 8px 32px 8px;
   }
 
+  .short-daily {
+    display: none;
+  }
+
+  .long-daily {
+    display: block;
+  }
+
 }
 
 @media (min-width: 390px) {
