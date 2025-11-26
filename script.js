@@ -299,15 +299,15 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     adHocTitle.classList.remove("hidden");
     adHocList.classList.remove("hidden");
 
-     // ad hoc
-     adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks["Daily"])[0]}</h2>`;
-     adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-     <input type="checkbox" />
-     <li>
-       <label>
-         ${el}
-       </label>
-     </li>`).join("");
+    // ad hoc
+    adHocTitle.innerHTML = `<h2>${new Date().toLocaleString("default", { weekday: "long" })} ${new Date().getDate()}</h2>`;
+    adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+      <input type="checkbox" />
+      <li>
+        <label>
+          ${el}
+        </label>
+      </li>`).join("");
 
   });
 
