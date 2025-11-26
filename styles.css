@@ -118,8 +118,8 @@ h2, h3 {
   font-family: Tahoma;
 }
 
-h3 {
-  font-size: 1.17em;
+.current h3 {
+  font-size: 1.1em;
 }
 
 #task-list li, #edit-daily-task li, #select-weekly-task-list li, #edit-weekly-task-list li {
