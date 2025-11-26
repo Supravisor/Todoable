@@ -1,7 +1,7 @@
 
 let tasks = {
   "Daily": {
-    "Ad hoc": ["plan report", "design brief"]
+    "Ad hoc": []
   },
   "Weekly": {
     "Monday": ["Mexican Monday"],
