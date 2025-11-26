@@ -172,11 +172,11 @@ h2 {
 
 @media (min-width: 0px) {
 
-  .short {
+  .short, .short-daily {
     display: block;
   }
 
-  .long {
+  .long, .long-daily {
     display: none;
   }
 
