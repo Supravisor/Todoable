@@ -79,6 +79,10 @@ h3 {
   max-width: 500px;
 }
 
+.daily {
+  margin: auto;
+}
+
 .buttons {
   display: flex;
   justify-content: space-around;
