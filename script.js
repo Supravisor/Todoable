@@ -300,9 +300,9 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     adHocList.classList.remove("hidden");
 
     // ad hoc
-    adHocTitle.innerHTML = `<h2>${new Date().toLocaleString("default", { weekday: "long" })} ${new Date().getDate()}</h2>`;
+    adHocTitle.innerHTML = `<h2 class="short-daily">${new Date().toLocaleString("default", { weekday: "short" })} ${new Date().getDate()}</h2>`;
+    adHocTitle.innerHTML += `<h2 class="long-daily">${new Date().toLocaleString("default", { weekday: "long" })} ${new Date().getDate()}</h2>`;
     adHocList.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-      <input type="checkbox" />
       <li>
         <label>
           ${el}
