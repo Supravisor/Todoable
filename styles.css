@@ -88,6 +88,12 @@ h3 {
   max-width: 500px;
 }
 
+.current {
+  min-width: 0px;
+  max-width: 500px;
+  margin: auto;
+}
+
 .buttons {
   display: flex;
   justify-content: space-around;
