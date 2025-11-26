@@ -128,15 +128,15 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         editWeeklyTask.classList.add("hidden");
       }
 
-       // ad hoc
-       adHocTitle.innerHTML = `<h2 class="heading2">${Object.keys(tasks[event.target.innerText])[0]}</h2>`;
-       adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
-       <input type="checkbox" />
-       <li>
-         <label>
-           ${el}
-         </label>
-       </li>`).join("");
+      // ad hoc
+      adHocTitle.innerHTML = `<h2>${new Date().toLocaleString("default", { weekday: "long" })} ${new Date().getDate()}</h2>`;
+      adHocList.innerHTML = tasks[event.target.innerText]["Ad hoc"].map(el => `
+        <input type="checkbox" />
+          <li>
+            <label>
+              ${el}
+            </label>
+          </li>`).join("");
 
     }
 
