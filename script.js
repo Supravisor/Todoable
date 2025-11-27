@@ -378,8 +378,6 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
 
     deleteDailyTaskItem.innerText = modifyAdHoc;
 
-    let removeItem = tasks["Daily"]["Ad hoc"];
-
     editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
       <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
       <li>
