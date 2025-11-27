@@ -62,7 +62,7 @@ h3 {
   margin-bottom: 1em;
 }
 
-#insert-daily-task, #update-daily-task, #select-weekly-task, #insert-weekly-task, #update-weekly-task, #delete-weekly-task {
+#insert-daily-task, #update-daily-task, #delete-daily-task , #select-weekly-task, #insert-weekly-task, #update-weekly-task, #delete-weekly-task {
   border: 2px solid blue;
   border-radius: 6px;
   margin-top: 8px;
@@ -73,7 +73,7 @@ h3 {
   border-radius: 6px;
 }
 
-#insert-daily-task, #edit, #update-daily-task, #select-weekly-task, #insert-weekly-task, #select-weekly-task, #edit-weekly-task, #update-weekly-task, #delete-weekly-task {
+#insert-daily-task, #edit, #update-daily-task, #delete-daily-task, #select-weekly-task, #insert-weekly-task, #select-weekly-task, #edit-weekly-task, #update-weekly-task, #delete-weekly-task {
   margin: auto;
   min-width: 300px;
   max-width: 500px;
@@ -99,7 +99,7 @@ h3 {
   justify-content: space-around;
 }
 
-#insert-daily, #update-daily, #modify-daily, #delete-daily, #add-weekly, #edit-weekly, #insert-weekly, #update-weekly, #delete-weekly, #modify-weekly, #confirm-delete-weekly, #cancel-delete-weekly, #confirm-modify-weekly {
+#insert-daily, #update-daily, #modify-daily, #delete-daily, #confirm-delete-daily, #cancel-delete-daily, #add-weekly, #edit-weekly, #insert-weekly, #update-weekly, #delete-weekly, #modify-weekly, #confirm-delete-weekly, #cancel-delete-weekly, #confirm-modify-weekly {
   margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
@@ -118,8 +118,8 @@ h2, h3 {
   font-family: Tahoma;
 }
 
-h3 {
-  font-size: 1.17em;
+.current h3 {
+  font-size: 1.1em;
 }
 
 #task-list li, #edit-daily-task li, #select-weekly-task-list li, #edit-weekly-task-list li {
@@ -133,7 +133,7 @@ h3 {
   margin-left: -1.75em;
 }
 
-#edit-daily-task, #delete-daily-task, #select-weekly-task-list, #edit-weekly-task-list {
+#edit-daily-task, #select-weekly-task-list, #edit-weekly-task-list {
   margin-left: 15%;
   margin-top: 1em;
   margin-bottom: 1em;

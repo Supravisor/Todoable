@@ -46,6 +46,11 @@ const closeUpdateAdHoc = document.getElementById("close-update-ad-hoc");
 const adHocTitle = document.getElementById("ad-hoc-title");
 const adHocList = document.getElementById("ad-hoc-list");
 const dailyInput = document.getElementById("daily-input");
+const deleteDailyTask = document.getElementById("delete-daily-task");
+const deleteDailyTaskItem = document.getElementById("delete-daily-task-item");
+const closeDeleteDaily = document.getElementById("close-delete-daily");
+const confirmDeleteDaily = document.getElementById("confirm-delete-daily");
+const cancelDeleteDaily = document.getElementById("cancel-delete-daily");
 
 // weekly
 const days = document.querySelectorAll("h2");
@@ -326,7 +331,7 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     }
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-        <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+        <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
         <li>
           <label id="edit">
             ${el}
@@ -343,7 +348,7 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
   closeUpdateAdHoc.addEventListener("click", event => {
 
     editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+     <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
      <li>
        <label>
          ${el}
@@ -358,11 +363,16 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
 
   });
 
-  // delete ad hoc
+  // remove ad hoc
 
   const editAdHoc = item => modifyAdHoc = item;
 
   deleteDaily.addEventListener("click", event => {
+
+    deleteDailyTask.classList.toggle("hidden");
+    edit.classList.toggle("hidden");
+
+    deleteDailyTaskItem.innerText = modifyAdHoc;
 
     let removeItem = tasks["Daily"]["Ad hoc"];
 
@@ -374,7 +384,33 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     }
 
       editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-        <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+        <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
+        <li>
+          <label id="edit">
+            ${el}
+          </label>
+        </li>`).join("");
+
+  });
+
+  // confirm daily delete
+
+  confirmDeleteDaily.addEventListener("click", event => {
+
+    deleteDailyTask.classList.toggle("hidden");
+    edit.classList.toggle("hidden");
+
+    let removeItem = tasks["Daily"]["Ad hoc"];
+
+    for (let i = 0; i < removeItem.length; i++) {
+      if (removeItem[i] === modifyAdHoc) {
+        tasks["Daily"]["Ad hoc"].splice(i, 1);
+        modifyAdHoc = "";
+      }
+    }
+
+      editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+        <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
         <li>
           <label id="edit">
             ${el}
@@ -389,7 +425,7 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     modifyAdHoc = "";
 
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
       <li>
         <label>
           ${el}
@@ -442,7 +478,7 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
   // weekly selection list
 
   selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+    <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
     <li>
       <label>
         ${el}
@@ -493,7 +529,7 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
         modifyAdHoc = "";
 
         selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-          <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+          <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
           <li>
             <label>
               ${el}
@@ -515,7 +551,7 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
     modifyAdHoc = "";
 
     selectWeeklyTaskList.innerHTML = Object.keys(tasks["Weekly"]).map(el => `
-      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value)" />
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
       <li>
         <label>
           ${el}
