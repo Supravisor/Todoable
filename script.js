@@ -369,6 +369,10 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
 
   deleteDaily.addEventListener("click", event => {
 
+    if (!modifyAdHoc) {
+      return;
+    }
+
     deleteDailyTask.classList.toggle("hidden");
     edit.classList.toggle("hidden");
 
