@@ -369,27 +369,22 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
 
   deleteDaily.addEventListener("click", event => {
 
+    if (!modifyAdHoc) {
+      return;
+    }
+
     deleteDailyTask.classList.toggle("hidden");
     edit.classList.toggle("hidden");
 
     deleteDailyTaskItem.innerText = modifyAdHoc;
 
-    let removeItem = tasks["Daily"]["Ad hoc"];
-
-    for (let i = 0; i < removeItem.length; i++) {
-      if (removeItem[i] === modifyAdHoc) {
-        tasks["Daily"]["Ad hoc"].splice(i, 1);
-        modifyAdHoc = "";
-      }
-    }
-
-      editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
-        <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
-        <li>
-          <label id="edit">
-            ${el}
-          </label>
-        </li>`).join("");
+    editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+      <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
+      <li>
+        <label id="edit">
+          ${el}
+        </label>
+      </li>`).join("");
 
   });
 
@@ -416,6 +411,22 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
             ${el}
           </label>
         </li>`).join("");
+
+  });
+
+  // cancel daily delete
+  cancelDeleteDaily.addEventListener("click", event => {
+
+    edit.classList.toggle("hidden");
+    deleteDailyTask.classList.toggle("hidden");
+
+  });
+
+  // close daily delete
+  closeDeleteDaily.addEventListener("click", event => {
+
+    edit.classList.toggle("hidden");
+    deleteDailyTask.classList.toggle("hidden");
 
   });
 
