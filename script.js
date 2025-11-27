@@ -46,6 +46,11 @@ const closeUpdateAdHoc = document.getElementById("close-update-ad-hoc");
 const adHocTitle = document.getElementById("ad-hoc-title");
 const adHocList = document.getElementById("ad-hoc-list");
 const dailyInput = document.getElementById("daily-input");
+const deleteDailyTask = document.getElementById("delete-daily-task");
+const deleteDailyTaskItem = document.getElementById("delete-daily-task-item");
+const closeDeleteDaily = document.getElementById("close-delete-daily");
+const confirmDeleteDaily = document.getElementById("confirm-delete-daily");
+const cancelDeleteDaily = document.getElementById("cancel-delete-daily");
 
 // weekly
 const days = document.querySelectorAll("h2");
