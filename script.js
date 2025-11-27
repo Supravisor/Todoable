@@ -416,6 +416,14 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
 
   });
 
+  // cancel daily delete
+  cancelDeleteDaily.addEventListener("click", event => {
+
+    edit.classList.toggle("hidden");
+    deleteDailyTask.classList.toggle("hidden");
+
+  });
+
   // modify weekly
   modifyWeekly.addEventListener("click", event => {
 
