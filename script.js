@@ -393,6 +393,32 @@ let diff = new Date(thisYear, thisMonth, thisDay).getTime();
 
   });
 
+  // confirm daily delete
+
+  confirmDeleteDaily.addEventListener("click", event => {
+
+    deleteDailyTask.classList.toggle("hidden");
+    edit.classList.toggle("hidden");
+
+    let removeItem = tasks["Daily"]["Ad hoc"];
+
+    for (let i = 0; i < removeItem.length; i++) {
+      if (removeItem[i] === modifyAdHoc) {
+        tasks["Daily"]["Ad hoc"].splice(i, 1);
+        modifyAdHoc = "";
+      }
+    }
+
+      editDailyTask.innerHTML = tasks["Daily"]["Ad hoc"].map(el => `
+        <input type="radio" name="edit" value="${el}" onclick="editAdHoc(this.value);" />
+        <li>
+          <label id="edit">
+            ${el}
+          </label>
+        </li>`).join("");
+
+  });
+
   // modify weekly
   modifyWeekly.addEventListener("click", event => {
 
